@@ -1,0 +1,16 @@
+C:\Yoson\HowTos\HowToKillProcessByCSharp\KillProcess\KillProcess\bin\Debug\KillProcess.exe
+C:\Yoson\HowTos\HowToKillProcessByCSharp\KillProcess\KillProcess\bin\Debug\KillProcess.pdb
+C:\Yoson\HowTos\HowToKillProcessByCSharp\KillProcess\KillProcess\bin\Debug\ProcessHelper.dll
+C:\Yoson\HowTos\HowToKillProcessByCSharp\KillProcess\KillProcess\bin\Debug\ProcessHelper.pdb
+C:\Yoson\HowTos\HowToKillProcessByCSharp\KillProcess\KillProcess\obj\x86\Debug\KillProcess.csprojResolveAssemblyReference.cache
+C:\Yoson\HowTos\HowToKillProcessByCSharp\KillProcess\KillProcess\obj\x86\Debug\KillProcess.exe
+C:\Yoson\HowTos\HowToKillProcessByCSharp\KillProcess\KillProcess\obj\x86\Debug\KillProcess.pdb
+C:\Users\Dan\Desktop\KillProcess\KillProcess\bin\Debug\KillProcess.exe
+C:\Users\Dan\Desktop\KillProcess\KillProcess\bin\Debug\KillProcess.pdb
+C:\Users\Dan\Desktop\KillProcess\KillProcess\bin\Debug\ProcessHelper.dll
+C:\Users\Dan\Desktop\KillProcess\KillProcess\bin\Debug\ProcessHelper.pdb
+C:\Users\Dan\Desktop\KillProcess\KillProcess\obj\x86\Debug\KillProcess.csprojAssemblyReference.cache
+C:\Users\Dan\Desktop\KillProcess\KillProcess\obj\x86\Debug\KillProcess.csproj.CoreCompileInputs.cache
+C:\Users\Dan\Desktop\KillProcess\KillProcess\obj\x86\Debug\KillProcess.csproj.CopyComplete
+C:\Users\Dan\Desktop\KillProcess\KillProcess\obj\x86\Debug\KillProcess.exe
+C:\Users\Dan\Desktop\KillProcess\KillProcess\obj\x86\Debug\KillProcess.pdb
