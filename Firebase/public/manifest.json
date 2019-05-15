@@ -1,0 +1,13 @@
+{
+  "name": "Gamer nanny Demo",
+  "short_name": "GamerNanny",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "lang": "en-US",
+  "description": "Gamer Nanny  application.",
+  "prefer_related_applications": false,
+  "theme_color": "#fff",
+  "scope": "/",
+  "orientation": "portrait-primary"
+}
