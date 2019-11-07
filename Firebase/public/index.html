@@ -21,6 +21,7 @@
 .btn {
   background-color: DodgerBlue;
   border: none;
+  margin: 1%;
   color: white;
   padding: 12px 30px;
   cursor: pointer;
@@ -61,15 +62,12 @@
           <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a> -->
 
     <div id="container">
-
-        <button class="btn"><i class="fa fa-download"></i><a href="https://gamer-nanny.firebaseapp.com/windows-app/GNClientInstall.exe" download>Download</a></button>
-
       <form method="get" action="https://gamer-nanny.firebaseapp.com/windows-app/GNClientInstall.exe">
-            <button type="submit">Download Client!</button>
+            <button class="btn" type="submit"><i class="fa fa-download"></i> Download Client!</button>
       </form>
       <form method="get" action="https://gamer-nanny.firebaseapp.com/windows-app/PoliteMessengerInstall.exe">
-        <button type="submit">Download Messenger!</button>
-  </form>
+        <button class="btn" type="submit"><i class="fa fa-download"></i> Download Messenger!</button>
+      </form>
       <div id="loading">Loading...</div>
       <div id="loaded" class="hidden">
         <div id="main">
@@ -116,8 +114,8 @@
             </fieldset>
             <p>
               <!-- <button id="sign-in-with-redirect">Sign In with Redirect</button> -->
-              <button id="sign-in-with-redirect" style="margin: 20px">LOGIN</button>              
-              <button id="sign-in-with-popup" style="display:none">Sign In with Popup</button>
+              <button class="btn" id="sign-in-with-redirect" style="margin: 20px">LOGIN</button>              
+              <button class="btn" id="sign-in-with-popup" style="display:none">Sign In with Popup</button>
             </p>
             <div id="firebaseui-spa" style="display:none">
               <h5>Single Page Application mode:</h5>
