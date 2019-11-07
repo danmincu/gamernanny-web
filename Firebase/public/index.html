@@ -15,6 +15,23 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+</style>
 
     <style media="screen">
         body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
@@ -44,7 +61,15 @@
           <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a> -->
 
     <div id="container">
-      <button>Download.. (comming soon)</button>
+
+        <button class="btn"><i class="fa fa-download"></i><a href="https://gamer-nanny.firebaseapp.com/windows-app/GNClientInstall.exe" download>Download</a></button>
+
+      <form method="get" action="https://gamer-nanny.firebaseapp.com/windows-app/GNClientInstall.exe">
+            <button type="submit">Download Client!</button>
+      </form>
+      <form method="get" action="https://gamer-nanny.firebaseapp.com/windows-app/PoliteMessengerInstall.exe">
+        <button type="submit">Download Messenger!</button>
+  </form>
       <div id="loading">Loading...</div>
       <div id="loaded" class="hidden">
         <div id="main">
