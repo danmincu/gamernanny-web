@@ -54,8 +54,8 @@
   <body>
 
       <div id="message">
-          <h1>Gamer Nanny</h1>
-          <h2>Special thanks to <b><A HREF="mailto:nicholas.mincu@gmail.com">nicholas.mincu@gmail.com</A></b> - the main reason for which this software is being built!</h2>
+          <h1 style="font-size: xx-large;" >Gamer Nanny</h1>
+          <h1>Special thanks to <b><A HREF="mailto:nicholas.mincu@gmail.com">nicholas.mincu@gmail.com</A></b> - the main reason for which this software is being built!</h1>
           <img src="https://gamer-nanny.firebaseapp.com/resources/GamerNanny.png">
           <!-- <h1>Firebase Hosting Setup Complete</h1>
           <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
@@ -66,24 +66,28 @@
       <div id="loaded" class="hidden">
         <div id="main">
           <div id="user-signed-in" class="hidden">
+            
             <div id="user-info">
               <div id="photo-container">
                 <img id="photo">
               </div>
-              <div id="name"></div>
-              <div id="email"></div>
-              <div id="phone"></div>
+              <h1><a id="name"></a> Do NOT install this software unless you are part of the test program!</h1>            
+              <h1>During installation enter your account
+                <a id="email"></a>
+                <a id="phone"></a>
+                when asked!
+              </h1>
               <div id="is-new-user"></div>
               <div class="clearfix"></div>
             </div>
             <p>
-                <h2>Do NOT install this software unless you are part of the test program!</h2>
-            
-                <form method="get" action="https://gamer-nanny.firebaseapp.com/windows-app/GNClientInstall.exe">
-                  <button class="btn" type="submit"><i class="fa fa-download"></i> Download GN Client!</button>
+                <form method="get" action="https://gamer-nanny.firebaseapp.com/windows-app/GNInstall.exe">
+                  <button class="btn" type="submit"><i class="fa fa-download"></i> Download Gammer Nanny!</button>
                 </form>
-                <form method="get" action="https://gamer-nanny.firebaseapp.com/windows-app/PoliteMessengerInstall.exe">
-                 <button class="btn" type="submit"><i class="fa fa-download"></i> Download Messenger!</button>
+
+
+                <form method="get" action="https://gamer-nanny.firebaseapp.com/windows-app/GNUninstall.exe">
+                 <button class="btn" type="submit"><i class="fa fa-download"></i> Download Uninstaller!</button>
                 </form>
             </p>
             <p>
