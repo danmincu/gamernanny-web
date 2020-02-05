@@ -49,6 +49,20 @@ export class UserComponent implements OnInit{
     }, err => console.log(err))
   }
 
+  show(value) {
+    this.userService.showCurrentUser(value)
+    .then(res =>
+       {console.log(res);},
+       err => console.log(err));
+  }
+
+  // upgrade(){
+  //   this.userService.addClaimCurrentUser()
+  //   .then(res => {
+  //     console.log(res);
+  //   }, err => console.log(err))
+  // }
+
   logout(){
     this.authService.doLogout()
     .then((res) => {
