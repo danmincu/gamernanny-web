@@ -13,7 +13,7 @@
     ]
   },
   "hosting": {
-    "public": "public",
+    "public": "dist/angular-firebase-app",
     "ignore": [
       "firebase.json",
       "**/.*",
