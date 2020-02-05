@@ -1,0 +1,164 @@
+[debug] [2020-02-05T03:28:13.017Z] ----------------------------------------------------------------------
+[debug] [2020-02-05T03:28:13.018Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Dan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-02-05T03:28:13.018Z] CLI Version:   7.12.1
+[debug] [2020-02-05T03:28:13.018Z] Platform:      win32
+[debug] [2020-02-05T03:28:13.018Z] Node Version:  v12.14.1
+[debug] [2020-02-05T03:28:13.019Z] Time:          Tue Feb 04 2020 22:28:13 GMT-0500 (Eastern Standard Time)
+[debug] [2020-02-05T03:28:13.019Z] ----------------------------------------------------------------------
+[debug] [2020-02-05T03:28:13.019Z] 
+[debug] [2020-02-05T03:28:13.025Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-05T03:28:13.025Z] > authorizing via signed-in user
+[debug] [2020-02-05T03:28:13.026Z] [iam] checking project gamer-nanny for permissions ["firebase.projects.get"]
+[debug] [2020-02-05T03:28:13.027Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/gamer-nanny:testIamPermissions  
+
+[debug] [2020-02-05T03:28:13.395Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-05T03:28:13.396Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/gamer-nanny  
+ 
+[debug] [2020-02-05T03:28:13.636Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\BitBucket\NetNanny\gamernanny\angular-firebase-app'...
+[info] 
+[debug] [2020-02-05T03:28:13.639Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/gamer-nanny/webApps/-/config  
+ 
+[debug] [2020-02-05T03:28:13.961Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+[warn] !  Your requested "node" version "8" doesn't match your global version "12"
+[info] +  functions: Emulator started at http://localhost:5001
+[info] i  functions: Watching "D:\BitBucket\NetNanny\gamernanny\angular-firebase-app\functions" for Cloud Functions...
+[debug] [2020-02-05T03:28:16.168Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-05T03:28:16.168Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-02-05T03:28:16.168Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-05T03:28:16.168Z] [worker-~diagnostic~-1cbcb8b9-3586-4851-9566-499e870ef4aa]: Assigning socketPath: \\?\pipe\D:\BitBucket\NetNanny\gamernanny\angular-firebase-app\functions\12748
+[debug] [2020-02-05T03:28:16.168Z] [worker-~diagnostic~-1cbcb8b9-3586-4851-9566-499e870ef4aa]: BUSY
+[debug] [2020-02-05T03:28:16.473Z] [runtime-status] [12748] Functions runtime initialized. {"cwd":"D:\\BitBucket\\NetNanny\\gamernanny\\angular-firebase-app\\functions","node_version":"12.14.1"}
+[debug] [2020-02-05T03:28:16.474Z] [runtime-status] [12748] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-05T03:28:16.476Z] [runtime-status] [12748] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"D:\\BitBucket\\NetNanny\\gamernanny\\angular-firebase-app\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-02-05T03:28:16.477Z] [runtime-status] [12748] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"D:\\BitBucket\\NetNanny\\gamernanny\\angular-firebase-app\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-02-05T03:28:16.478Z] [runtime-status] [12748] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"D:\\BitBucket\\NetNanny\\gamernanny\\angular-firebase-app\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  Error: Cannot find module 'D:\BitBucket\NetNanny\gamernanny\angular-firebase-app\functions\lib\index.js'. Please verify that the package.json has a valid "main" entry
+    at tryPackage (internal/modules/cjs/loader.js:297:19)
+    at Function.Module._findPath (internal/modules/cjs/loader.js:528:18)
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:780:27)
+    at Function.Module._load (internal/modules/cjs/loader.js:686:27)
+    at Module.require (internal/modules/cjs/loader.js:848:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\Dan\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:718:33
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\Dan\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:4:58)
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[warn] !  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this.
+[debug] [2020-02-05T03:28:16.523Z] [worker-~diagnostic~-1cbcb8b9-3586-4851-9566-499e870ef4aa]: exited
+[debug] [2020-02-05T03:28:16.523Z] [worker-~diagnostic~-1cbcb8b9-3586-4851-9566-499e870ef4aa]: FINISHED
+[debug] [2020-02-05T03:30:16.738Z] File D:\BitBucket\NetNanny\gamernanny\angular-firebase-app\functions\src\index.ts changed, reloading triggers
+[debug] [2020-02-05T03:30:17.739Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-02-05T03:30:17.746Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-05T03:30:17.746Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-02-05T03:30:17.746Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-05T03:30:17.746Z] [worker-~diagnostic~-52f728c6-f562-439e-b998-4f83f40a9259]: Assigning socketPath: \\?\pipe\D:\BitBucket\NetNanny\gamernanny\angular-firebase-app\functions\3304
+[debug] [2020-02-05T03:30:17.746Z] [worker-~diagnostic~-52f728c6-f562-439e-b998-4f83f40a9259]: BUSY
+[debug] [2020-02-05T03:30:18.093Z] [runtime-status] [3304] Functions runtime initialized. {"cwd":"D:\\BitBucket\\NetNanny\\gamernanny\\angular-firebase-app\\functions","node_version":"12.14.1"}
+[debug] [2020-02-05T03:30:18.094Z] [runtime-status] [3304] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-05T03:30:18.097Z] [runtime-status] [3304] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"D:\\BitBucket\\NetNanny\\gamernanny\\angular-firebase-app\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-02-05T03:30:18.099Z] [runtime-status] [3304] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"D:\\BitBucket\\NetNanny\\gamernanny\\angular-firebase-app\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-02-05T03:30:18.100Z] [runtime-status] [3304] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"D:\\BitBucket\\NetNanny\\gamernanny\\angular-firebase-app\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  Error: Cannot find module 'D:\BitBucket\NetNanny\gamernanny\angular-firebase-app\functions\lib\index.js'. Please verify that the package.json has a valid "main" entry
+    at tryPackage (internal/modules/cjs/loader.js:297:19)
+    at Function.Module._findPath (internal/modules/cjs/loader.js:528:18)
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:780:27)
+    at Function.Module._load (internal/modules/cjs/loader.js:686:27)
+    at Module.require (internal/modules/cjs/loader.js:848:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\Dan\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:718:33
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\Dan\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:4:58)
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[warn] !  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this.
+[debug] [2020-02-05T03:30:18.151Z] [worker-~diagnostic~-52f728c6-f562-439e-b998-4f83f40a9259]: exited
+[debug] [2020-02-05T03:30:18.151Z] [worker-~diagnostic~-52f728c6-f562-439e-b998-4f83f40a9259]: FINISHED
+[debug] [2020-02-05T03:31:11.406Z] ----------------------------------------------------------------------
+[debug] [2020-02-05T03:31:11.408Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Dan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-02-05T03:31:11.408Z] CLI Version:   7.12.1
+[debug] [2020-02-05T03:31:11.408Z] Platform:      win32
+[debug] [2020-02-05T03:31:11.408Z] Node Version:  v12.14.1
+[debug] [2020-02-05T03:31:11.409Z] Time:          Tue Feb 04 2020 22:31:11 GMT-0500 (Eastern Standard Time)
+[debug] [2020-02-05T03:31:11.409Z] ----------------------------------------------------------------------
+[debug] [2020-02-05T03:31:11.409Z] 
+[debug] [2020-02-05T03:31:11.416Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-05T03:31:11.416Z] > authorizing via signed-in user
+[debug] [2020-02-05T03:31:11.416Z] [iam] checking project gamer-nanny for permissions ["firebase.projects.get"]
+[debug] [2020-02-05T03:31:11.418Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/gamer-nanny:testIamPermissions  
+
+[debug] [2020-02-05T03:31:11.800Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-05T03:31:11.801Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/gamer-nanny  
+ 
+[debug] [2020-02-05T03:31:12.095Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\BitBucket\NetNanny\gamernanny\angular-firebase-app'...
+[info] 
+[debug] [2020-02-05T03:31:12.107Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/gamer-nanny/webApps/-/config  
+ 
+[debug] [2020-02-05T03:31:12.359Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+[warn] !  Your requested "node" version "8" doesn't match your global version "12"
+[info] +  functions: Emulator started at http://localhost:5001
+[info] i  functions: Watching "D:\BitBucket\NetNanny\gamernanny\angular-firebase-app\functions" for Cloud Functions...
+[debug] [2020-02-05T03:31:14.629Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-05T03:31:14.629Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-02-05T03:31:14.629Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-05T03:31:14.629Z] [worker-~diagnostic~-4535d9db-b9e7-4c9e-b898-c0f350e3c72f]: Assigning socketPath: \\?\pipe\D:\BitBucket\NetNanny\gamernanny\angular-firebase-app\functions\22464
+[debug] [2020-02-05T03:31:14.630Z] [worker-~diagnostic~-4535d9db-b9e7-4c9e-b898-c0f350e3c72f]: BUSY
+[debug] [2020-02-05T03:31:14.921Z] [runtime-status] [22464] Functions runtime initialized. {"cwd":"D:\\BitBucket\\NetNanny\\gamernanny\\angular-firebase-app\\functions","node_version":"12.14.1"}
+[debug] [2020-02-05T03:31:14.922Z] [runtime-status] [22464] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-05T03:31:14.924Z] [runtime-status] [22464] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"D:\\BitBucket\\NetNanny\\gamernanny\\angular-firebase-app\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-02-05T03:31:14.925Z] [runtime-status] [22464] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"D:\\BitBucket\\NetNanny\\gamernanny\\angular-firebase-app\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-02-05T03:31:14.926Z] [runtime-status] [22464] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"D:\\BitBucket\\NetNanny\\gamernanny\\angular-firebase-app\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  Error: Cannot find module 'D:\BitBucket\NetNanny\gamernanny\angular-firebase-app\functions\lib\index.js'. Please verify that the package.json has a valid "main" entry
+    at tryPackage (internal/modules/cjs/loader.js:297:19)
+    at Function.Module._findPath (internal/modules/cjs/loader.js:528:18)
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:780:27)
+    at Function.Module._load (internal/modules/cjs/loader.js:686:27)
+    at Module.require (internal/modules/cjs/loader.js:848:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\Dan\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:718:33
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\Dan\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:4:58)
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[warn] !  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this.
+[debug] [2020-02-05T03:31:14.970Z] [worker-~diagnostic~-4535d9db-b9e7-4c9e-b898-c0f350e3c72f]: exited
+[debug] [2020-02-05T03:31:14.970Z] [worker-~diagnostic~-4535d9db-b9e7-4c9e-b898-c0f350e3c72f]: FINISHED
+[debug] [2020-02-05T03:37:48.237Z] File D:\BitBucket\NetNanny\gamernanny\angular-firebase-app\functions\package.json changed, reloading triggers
+[debug] [2020-02-05T03:37:49.238Z] [worker-pool] Cleaned up workers for ~diagnostic~: 1 --> 0
+[debug] [2020-02-05T03:37:49.244Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-02-05T03:37:49.244Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-02-05T03:37:49.244Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-02-05T03:37:49.244Z] [worker-~diagnostic~-fa74344c-ac7d-476c-ae56-4c40fa4a1a6a]: Assigning socketPath: \\?\pipe\D:\BitBucket\NetNanny\gamernanny\angular-firebase-app\functions\22344
+[debug] [2020-02-05T03:37:49.244Z] [worker-~diagnostic~-fa74344c-ac7d-476c-ae56-4c40fa4a1a6a]: BUSY
+[debug] [2020-02-05T03:37:49.623Z] [runtime-status] [22344] Functions runtime initialized. {"cwd":"D:\\BitBucket\\NetNanny\\gamernanny\\angular-firebase-app\\functions","node_version":"12.14.1"}
+[debug] [2020-02-05T03:37:49.624Z] [runtime-status] [22344] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-02-05T03:37:49.628Z] [runtime-status] [22344] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"D:\\BitBucket\\NetNanny\\gamernanny\\angular-firebase-app\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-02-05T03:37:49.630Z] [runtime-status] [22344] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"D:\\BitBucket\\NetNanny\\gamernanny\\angular-firebase-app\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-02-05T03:37:49.632Z] [runtime-status] [22344] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"D:\\BitBucket\\NetNanny\\gamernanny\\angular-firebase-app\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  Error: Cannot find module 'D:\BitBucket\NetNanny\gamernanny\angular-firebase-app\functions\lib\functions\src\index.js'. Please verify that the package.json has a valid "main" entry
+    at tryPackage (internal/modules/cjs/loader.js:297:19)
+    at Function.Module._findPath (internal/modules/cjs/loader.js:528:18)
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:780:27)
+    at Function.Module._load (internal/modules/cjs/loader.js:686:27)
+    at Module.require (internal/modules/cjs/loader.js:848:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at C:\Users\Dan\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:718:33
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Users\Dan\AppData\Roaming\npm\node_modules\firebase-tools\lib\emulator\functionsEmulatorRuntime.js:4:58)
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)
+[warn] !  We were unable to load your functions code. (see above)
+   - It appears your code is written in Typescript, which must be compiled before emulation.
+   - You may be able to run "npm run build" in your functions directory to resolve this.
+[debug] [2020-02-05T03:37:49.692Z] [worker-~diagnostic~-fa74344c-ac7d-476c-ae56-4c40fa4a1a6a]: exited
+[debug] [2020-02-05T03:37:49.692Z] [worker-~diagnostic~-fa74344c-ac7d-476c-ae56-4c40fa4a1a6a]: FINISHED
