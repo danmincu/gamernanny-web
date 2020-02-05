@@ -1,4 +1,5 @@
-Experiments/WatchDog/WatchdogLib/.vs/
-Experiments/WatchDog/WatchdogLib/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
-Experiments/WatchDog/WatchdogLib/obj/
-Experiments/KillProcess/ProcessHelper/obj/
+*.csproj.user
+*.suo
+**/.vs/*
+**/bin/*
+**/obj/*
