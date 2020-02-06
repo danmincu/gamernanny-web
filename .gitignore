@@ -4,3 +4,4 @@
 **/bin/*
 **/obj/*
 firebase-debug.log
+firebase-admin/node_modules/*
