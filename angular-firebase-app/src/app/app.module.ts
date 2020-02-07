@@ -19,6 +19,7 @@ import { AuthGuard } from './core/auth.guard';
 import { AuthService } from './core/auth.service';
 import { UserService } from './core/user.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PhoneLoginComponent } from './phone-login/phone-login.component';
 
 
 
@@ -27,11 +28,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     LoginComponent,
     UserComponent,
-    RegisterComponent
+    RegisterComponent,
+    PhoneLoginComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    FormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features

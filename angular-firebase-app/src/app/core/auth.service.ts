@@ -70,6 +70,16 @@ export class AuthService {
         resolve(res);
       }, err => reject(err))
     })
+  }  
+
+  doPhoneLogin() {
+    return new Promise<any>((resolve, reject) => {
+      // temp bad code
+      firebase.auth().signInWithPhoneNumber("123",null)
+      .then(res => {
+        resolve(res);
+      }, err => reject(err))
+    })
   }
 
   doLogout(){

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AuthService } from '../core/auth.service'
 import { Router, Params } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { PhoneLoginComponent } from './../phone-login/phone-login.component';
 
 @Component({
   selector: 'page-login',
