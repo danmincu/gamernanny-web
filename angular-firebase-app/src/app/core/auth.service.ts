@@ -72,16 +72,6 @@ export class AuthService {
     })
   }  
 
-  doPhoneLogin() {
-    return new Promise<any>((resolve, reject) => {
-      // temp bad code
-      firebase.auth().signInWithPhoneNumber("123",null)
-      .then(res => {
-        resolve(res);
-      }, err => reject(err))
-    })
-  }
-
   doLogout(){
     return new Promise((resolve, reject) => {
       if(firebase.auth().currentUser){

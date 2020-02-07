@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { WindowService } from '../window.service';
 import { FormBuilder } from '@angular/forms';
 import { AuthService } from '../core/auth.service'
@@ -21,15 +21,16 @@ export class PhoneLoginComponent implements OnInit {
 
   user: any;
 
+  public hideCaptcha : boolean = false;
+
   constructor(private win: WindowService, 
     public authService: AuthService,
     private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit() {   
     this.windowRef = this.win.windowRef;
-    this.windowRef.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container')
-
-    this.windowRef.recaptchaVerifier.render()
+    this.windowRef.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+    this.windowRef.recaptchaVerifier.render();
   }
 
 
@@ -37,12 +38,15 @@ export class PhoneLoginComponent implements OnInit {
 
     const appVerifier = this.windowRef.recaptchaVerifier;
 
+    console.log(appVerifier);
+
     const num = this.phoneNumber.e164;
 
     firebase.auth().signInWithPhoneNumber(num, appVerifier)
             .then(result => {
 
                 this.windowRef.confirmationResult = result;
+                this.hideCaptcha = true;
 
             })
             .catch( error => console.log(error) );
