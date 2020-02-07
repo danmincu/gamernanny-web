@@ -1,10 +1,11 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ChangeDetectorRef } from '@angular/core';
 import { WindowService } from '../window.service';
 import { FormBuilder } from '@angular/forms';
 import { AuthService } from '../core/auth.service'
 import { Router, Params } from '@angular/router';
 import * as firebase from 'firebase';
 import { PhoneNumber } from './phone-number';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'phone-login',
@@ -25,20 +26,40 @@ export class PhoneLoginComponent implements OnInit {
 
   constructor(private win: WindowService, 
     public authService: AuthService,
-    private router: Router) { }
+    private router: Router,
+    private cdRef: ChangeDetectorRef) { }
 
   ngOnInit() {   
-    this.windowRef = this.win.windowRef;
-    this.windowRef.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+    this.windowRef = this.win.windowRef;    
+    var self = this;
+    this.windowRef.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container',
+    {
+      'size': 'normal',      
+      'callback': (a) => { 
+          self.hideIt();
+      },
+      'expired-callback': function() {
+        // Response expired. Ask user to solve reCAPTCHA again.
+        // ...
+      }
+    });
+    
     this.windowRef.recaptchaVerifier.render();
   }
 
+  hideIt(){ 
+    setTimeout(() => {
+    this.hideCaptcha = true;
+    console.log("should be hidden");
+    this.cdRef.detectChanges();
+  }, 1000)
+}
 
   sendLoginCode() {
 
-    const appVerifier = this.windowRef.recaptchaVerifier;
+    const appVerifier = this.windowRef.recaptchaVerifier;    
 
-    console.log(appVerifier);
+    // console.log(appVerifier);
 
     const num = this.phoneNumber.e164;
 
