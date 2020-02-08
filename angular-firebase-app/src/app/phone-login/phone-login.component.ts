@@ -35,25 +35,29 @@ export class PhoneLoginComponent implements OnInit {
     this.windowRef.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container',
     {
       'size': 'normal',      
-      'callback': (a) => { 
-          self.hideIt();
+      'callback': (response) => { 
+         self.hideReCaptcha();
       },
       'expired-callback': function() {
         // Response expired. Ask user to solve reCAPTCHA again.
-        // ...
+        self.showReCaptcha()
       }
     });
     
     this.windowRef.recaptchaVerifier.render();
   }
 
-  hideIt(){ 
+  hideReCaptcha(){ 
+      setTimeout(() => {
+      this.hideCaptcha = true;      
+      this.cdRef.detectChanges();}, 1000)
+  }
+
+  showReCaptcha(){ 
     setTimeout(() => {
-    this.hideCaptcha = true;
-    console.log("should be hidden");
-    this.cdRef.detectChanges();
-  }, 1000)
-}
+    this.hideCaptcha = false;      
+    this.cdRef.detectChanges();}, 1000)
+  }
 
   sendLoginCode() {
 
