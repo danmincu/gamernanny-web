@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ngx-admin Demo Application</title>
+
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <!-- <ngx-app>Loading...</ngx-app> -->
+
+  <style>@-webkit-keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}@-moz-keyframes 
+   spin{0%{-moz-transform:rotate(0)}100%{-moz-transform:rotate(360deg)}}@keyframes 
+   spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}.spinner{position:fixed;top:0;left:0;width:100%;height:100%;z-index:1003;background: #ff000000;overflow:hidden}  
+   .spinner div:first-child{display:block;position:relative;left:20%;top:60%;width:150px;height:150px;margin:-75px 0 0 -75px;border-radius:50%;box-shadow:0 3px 3px 0 rgba(255,56,106,1);
+    transform:translate3d(0,0,0);animation:spin 2s linear infinite}.spinner1{position:fixed;top:0;left:0;width:100%;height:100%;z-index:1003;background: #ff000000;overflow:hidden}
+   .spinner div:first-child:after,.spinner div:first-child:before{content:'';position:absolute;border-radius:50%} 
+   .spinner div:first-child:before{top:5px;left:5px;right:5px;bottom:5px;box-shadow:0 3px 3px 0 rgb(255, 228, 32);-webkit-animation:spin 3s linear infinite;animation:spin 3s linear infinite}  
+   .spinner div:first-child:after{top:15px;left:15px;right:15px;bottom:15px;box-shadow:0 3px 3px 0 rgba(61, 175, 255,1);animation:spin 1.5s linear infinite}
+   .spinner1 div:first-child{display:block;position:relative;left:70%;top:60%;width:150px;height:150px;margin:-75px 0 0 -75px;border-radius:50%;box-shadow:0 3px 3px 0 rgba(255,56,106,1);
+    transform:translate3d(0,0,0);animation:spin 2s linear infinite}
+   .spinner1 div:first-child:after,.spinner1 div:first-child:before{content:'';position:absolute;border-radius:50%} 
+   .spinner1 div:first-child:before{top:5px;left:5px;right:5px;bottom:5px;box-shadow:0 3px 3px 0 rgb(255, 228, 32);-webkit-animation:spin 3s linear infinite;animation:spin 3s linear infinite}  
+   .spinner1 div:first-child:after{top:15px;left:15px;right:15px;bottom:15px;box-shadow:0 3px 3px 0 rgba(61, 175, 255,1);animation:spin 1.5s linear infinite}
+
+   </style>
+  <div id="nb-global-spinner" class="spinner1">
+    <div class="blob blob-0"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-4"></div>
+    <div class="blob blob-5"></div>
+  </div>
+
+  <div id="nb-global-spinner" class="spinner">
+    <div class="blob blob-0"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-4"></div>
+    <div class="blob blob-5"></div>
+  </div>
+
+  <?xml version="1.0" encoding="UTF-8"?>
+  <svg left="20%" top="20%" width="80%" height="auto" version="1.1" viewBox="0 0 187.98303 158.33998" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <linearGradient id="h">
+        <stop stop-color="#a17885" offset="0"/>
+        <stop stop-color="#a17885" stop-opacity="0" offset="1"/>
+      </linearGradient>
+      <linearGradient id="a">
+        <stop offset="0"/>
+        <stop stop-opacity="0" offset="1"/>
+      </linearGradient>
+      <radialGradient id="d" cx="145.52" cy="124.32" r="51.411" gradientTransform="matrix(1 0 0 .66476 0 41.677)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+      <radialGradient id="c" cx="128.14" cy="160.77" r="28.919" gradientTransform="matrix(1 0 0 1.607 0 -97.588)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+      <radialGradient id="e" cx="73.26" cy="95.514" r="15.223" gradientTransform="matrix(.88707 0 0 .88769 14.682 8.9289)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+      <linearGradient id="k" x1="112.53" x2="131.46" y1="102.12" y2="102.12" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+      <linearGradient id="j" x1="51.28" x2="81.939" y1="126.35" y2="126.35" gradientTransform="translate(5.6073 6.8792)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+      <linearGradient id="i" x1="139.73" x2="167.78" y1="127.74" y2="127.74" gradientTransform="translate(5.6073 6.8792)" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+      <meshgradient id="g" x="139.0474" y="113.18008" gradientTransform="translate(5.6073 6.8792)" gradientUnits="userSpaceOnUse">
+        <meshrow>
+          <meshpatch>
+            <stop stop-color="#fff" path="c 7.13925,-7.13925  18.7143,-7.13925  25.8535,0"/>
+            <stop stop-color="#ff5d97" path="c 7.13925,7.13925  7.13925,18.7143  0,25.8535"/>
+            <stop stop-color="#fff" path="c -7.13925,7.13925  -18.7143,7.13925  -25.8535,0"/>
+            <stop stop-color="#ff5d97" path="c -7.13925,-7.13925  -7.13925,-18.7143  0,-25.8535"/>
+          </meshpatch>
+        </meshrow>
+      </meshgradient>
+      <meshgradient id="f" x="54.730142" y="113.18008" gradientTransform="translate(5.6073 6.8792)" gradientUnits="userSpaceOnUse">
+        <meshrow>
+          <meshpatch>
+            <stop stop-color="#fff" path="c 7.13925,-7.13925  18.7143,-7.13925  25.8535,0"/>
+            <stop stop-color="#ff5d97" path="c 7.13925,7.13925  7.13925,18.7143  0,25.8535"/>
+            <stop stop-color="#fff" path="c -7.13925,7.13925  -18.7143,7.13925  -25.8535,0"/>
+            <stop stop-color="#ff5d97" path="c -7.13925,-7.13925  -7.13925,-18.7143  -7.10543e-15,-25.8535"/>
+          </meshpatch>
+        </meshrow>
+      </meshgradient>
+      <radialGradient id="b" cx="37.251" cy="78.038" r="15.337" gradientTransform="matrix(1 0 0 .64867 0 27.417)" gradientUnits="userSpaceOnUse" xlink:href="#h"/>
+    </defs>    
+    <g transform="translate(-8.18 -5.2294)">
+      <g transform="matrix(-1.1596 0 0 .92304 285.35 -16.996)" fill="#cacaca" stroke="url(#d)" stroke-width="2.2799">
+        <path d="m124.35 140.9c-26.458 37.042-29.104 0-29.104 0v-34.396c0-7.9375 19.221-14.993 19.221-14.993 10.35-1.7031 0 6.8123 31.05 6.8123 31.05 0 19.221-8.5153 31.05-6.8123 0 0 19.221 7.0555 19.221 14.993v34.396s-2.6458 37.042-29.104 0c0 0-21.634-27.249-42.333 0z" fill="#cacaca" stroke="url(#d)" stroke-width="2.2799"/>
+      </g>
+      <path d="m76.622 81.538h6.0937v9.1406h9.1406v6.0937h-9.1406v9.1407h-6.0937v-9.1407h-9.1406v-6.0937h9.1406v-9.1406" fill="#899fa6" stroke="url(#e)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6322"/>
+      <g transform="matrix(1.594 0 0 1.594 -40.459 -70.505)" stroke="url(#k)" stroke-linecap="round" stroke-width="1.2384">
+        <circle cx="121.99" cy="96.389" r="3.1183" fill="#f80704"/>
+        <circle cx="121.99" cy="107.84" r="3.1183" fill="#f8ec04"/>
+        <g transform="rotate(-90 121.99 102.12)">
+          <circle cx="121.99" cy="96.389" r="3.1183" fill="#04f81b"/>
+          <circle cx="121.99" cy="107.84" r="3.1183" fill="#04b5f8"/>
+        </g>
+      </g>
+      <circle cx="73.264" cy="132.99" r="18.281" fill="#ff5d97" fill-opacity=".68333" stroke="url(#f)" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".99804" stroke-width=".9403"/>
+      <circle cx="157.58" cy="132.99" r="18.281" fill="#ff5d97" fill-opacity=".68333" stroke="url(#g)" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".99804" stroke-width=".9403"/>
+      <g transform="matrix(-1.2125 0 0 .96515 304.31 -93.674)" fill="#ff5d97" fill-opacity=".98824" stroke="url(#c)" stroke-width=".86906">
+        <path d="m124.82 163.95s-19.461 7.2157-20.516 15.555c3.0652 90.877-31.397-75.085 50.45-64.261-5.1461 11.582-6.1999 45.427 1.4359 55.922-31.59-0.90197-20.633-8.9826-31.37-7.2157z" fill="#ff5d97" fill-opacity=".68333" stroke="url(#c)" stroke-width=".86906"/>
+      </g>
+      <g transform="matrix(1.5194 0 0 1.5194 -15.919 -58.215)" fill="none" stroke="url(#b)" stroke-width=".5">
+        <path d="m30.79 71.513c3.4698-0.08363 6.2657 2.8901 6.3132 6.2939 0.05446 3.9022-3.3002 7.0349-7.1363 7.0578-4.3344 0.02583-7.8045-3.7103-7.8024-7.9787 0.0024-4.7667 4.1204-8.5744 8.8211-8.5469 3.0244 0.01768 5.3554 0.91611 7.582 3.4509l13.63 14.828-1.7238 1.0473-13.029-14.418c-2.7498-3.4767-4.832-3.308-7.1867-3.0825-3.7238 0.35648-6.7702 3.1895-6.7721 6.9177-0.0017 3.3384 3.1765 6.4057 6.5666 6.3855 3.0003-0.01788 5.5769-2.9878 5.5343-6.0398-0.03716-2.6622-2.1294-4.4211-4.8433-4.3557-2.324 0.05601-5.3921 1.5545-5.3544 3.9701-0.1647-2.9975 2.429-5.4572 5.4004-5.5288z" fill="#ff5d97" fill-opacity=".68333" fill-rule="evenodd" stroke="url(#b)" stroke-width=".5"/>
+      </g>
+      <path d="m73.73 141.84c-5.41 0.59274-10.136-3.7236-10.645-9.0211-0.59478-6.1861 4.3572-11.561 10.43-12.083 6.9619-0.59819 12.987 4.9908 13.521 11.839 0.60255 7.7376-5.6244 14.414-13.248 14.959-8.5132 0.60758-15.842-6.2579-16.396-14.656-0.35668-5.4037 2.0737-10.727 6.2964-14.094" fill="none" stroke="url(#j)" stroke-width=".94014"/>
+      <path d="m166.66 130.72c1.9923 5.0162-0.88915 10.672-5.8198 12.555-5.7577 2.1988-12.202-1.1193-14.301-6.7879-2.4065-6.4985 1.3492-13.732 7.756-16.047 7.239-2.615 15.264 1.5789 17.793 8.724 2.8242 7.9792-1.8085 16.795-9.6921 19.538-5.0724 1.765-10.802 0.84408-15.134-2.3059" fill="none" stroke="url(#i)" stroke-width=".94014"/>
+    </g>
+  </svg>
+
+</body>
+</html>
