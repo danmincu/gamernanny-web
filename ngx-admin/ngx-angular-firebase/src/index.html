@@ -10,14 +10,19 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <style>
-    #svgelem {
-       position: relative;
-       max-width: 30%;
-       -webkit-transform: translateY(70%);
+     /* -webkit-transform: translateY(70%);
        -ms-transform: translateY(70%);
        transform: translateY(70%);
        margin-top: auto; 
        margin-bottom: auto;
+        */
+
+    #svgelem {
+       position: absolute;
+       max-width: 30%;
+       -webkit-transform: translateX(100%);
+       -ms-transform: translateX(100%);
+       transform: translateX(100%);
        margin-left:auto;
        margin-right:auto;
        display:block;
@@ -25,17 +30,17 @@
     html, body {
       height: 100%;  
      }
-     /* #svg-container
+     #svg-container
      {
        display: flex;
        align-items: center;
        
        height: 100%;
-     } */
+     }
   </style>
 </head>
 <body>
-  <!-- <ngx-app>Loading...</ngx-app> -->
+  <ngx-app></ngx-app>
 
   <!-- <style>@-webkit-keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}@-moz-keyframes 
    spin{0%{-moz-transform:rotate(0)}100%{-moz-transform:rotate(360deg)}}@keyframes 
