@@ -33,7 +33,7 @@ import { PhoneLoginComponent } from './phone-login/phone-login.component';
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule,    
     FormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),

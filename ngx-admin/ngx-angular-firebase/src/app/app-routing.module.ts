@@ -1,5 +1,11 @@
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { UserComponent } from './user/user.component';
+import { AuthGuard } from './core/auth.guard';
+import { UserResolver } from './user/user.resolver';
+
 import {
   NbAuthComponent,
   NbLoginComponent,
@@ -15,6 +21,8 @@ const routes: Routes = [
     loadChildren: () => import('app/pages/pages.module')
       .then(m => m.PagesModule),
   },
+  { path: 'register', component: RegisterComponent, canActivate: [AuthGuard] },
+  { path: 'user', component: UserComponent,  resolve: { data: UserResolver}},
   {
     path: 'auth',
     component: NbAuthComponent,
@@ -22,6 +30,10 @@ const routes: Routes = [
       {
         path: '',
         component: NbLoginComponent,
+      },
+      {
+        path: 'firebase-login',
+        component: LoginComponent,
       },
       {
         path: 'login',
