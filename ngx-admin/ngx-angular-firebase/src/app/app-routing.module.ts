@@ -34,6 +34,7 @@ const routes: Routes = [
       {
         path: 'firebase-login',
         component: LoginComponent,
+        canActivate: [AuthGuard] 
       },
       {
         path: 'login',
