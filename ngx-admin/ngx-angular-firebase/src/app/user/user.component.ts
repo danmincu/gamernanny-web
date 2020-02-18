@@ -49,8 +49,8 @@ export class UserComponent implements OnInit{
     }, err => console.log(err))
   }
 
-  show(value) {
-    this.userService.showCurrentUser(value)
+  show() {
+    this.userService.showCurrentUser()
     .then(res =>
        {console.log(res);},
        err => console.log(err));

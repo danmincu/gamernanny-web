@@ -40,13 +40,13 @@ export class UserService {
     })
   }
 
-  showCurrentUser(value){
+  showCurrentUser(){
     return new Promise<any>((resolve, reject) => {
       firebase.auth().currentUser.getIdTokenResult()
       .then((idTokenResult) => {
           // Confirm the user is an Admin.
           console.log(idTokenResult.claims)
-          resolve();
+          resolve(idTokenResult);
         }),
       error => {
         console.log(error);

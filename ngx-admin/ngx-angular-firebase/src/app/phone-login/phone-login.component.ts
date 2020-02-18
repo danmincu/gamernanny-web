@@ -1,11 +1,9 @@
-import { Component, OnInit, ViewEncapsulation, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { WindowService } from '../window.service';
-import { FormBuilder } from '@angular/forms';
 import { AuthService } from '../core/auth.service'
-import { Router, Params } from '@angular/router';
+import { Router } from '@angular/router';
 import * as firebase from 'firebase';
 import { PhoneNumber } from './phone-number';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'phone-login',
