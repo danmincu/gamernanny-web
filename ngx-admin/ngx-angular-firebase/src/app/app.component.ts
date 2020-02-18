@@ -22,6 +22,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.analytics.trackPageViews();
     this.seoService.trackCanonicalChanges();
-    setTimeout(() => {this.doneLoading.next(true)}, 600);
+    setTimeout(() => {this.doneLoading.next(true)}, 4000);
   }
 }
