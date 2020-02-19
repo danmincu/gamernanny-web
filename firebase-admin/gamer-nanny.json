@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "gamer-nanny",
+  "private_key_id": "6d8b5edaae15844d9a9a60f2b6ec21d1814836fe",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCqageR5Ii4gweL\npm21TPEeGtfh3yPLaElTyba+q2btOuDbm1GXmNqoHaz1ldK9eb5sFMTdEdPDCFf3\nIQ5d2FAtjnZ+BcNO5ji1A21tA5hew+0kOGt0h7a/fUCz8h0BLAfb/KJrxfkpWVQa\nqsQohfXu2nJXMvC0OZpjOYtPYhiSwMtF9aZp2U0hzHNv8BDaAPtT1UAFYvsfxP9n\ntXpD+pUAAatfWnqjDthrAt2Hfz9oy+PztWL8/ptwuZ1Ns2OCBpAqiJqFgt9XGwxE\n4QfkcFAX3sMxe/CBr32Lr+RqyIRZzmPxVxV1aH3oKwcr1YL5rWAy5EwhfKvkB5d1\nGNdp9qh/AgMBAAECggEADZV2FQMKguqu50rU4+bGMYgiPTb0O3qMnckub/Rpt+9B\njT/MOTFN/Kig6NKQgdn6e9ML/jM1lg5MNL7FzmU3vunkOBdtghSH4KXtSwtGUgd8\nF68HobpPruPlDHL4LOe9mKOCruSQ/+LG+XkzOaez+t4ezySYW0VcMRydJi7Dlq72\nOCPrVma/uN444MPaElknoRYnRtD8GGdLpEwxYhe1BQjMZvxC2dar18dHNuYpoeo4\nPDd3PENojbYdZRIFM85uq3AXYFv9GdMIRYpMV+vht+b6ml1mkaEf56GC6TFPFzCG\nyD3qHA2HgssMx1ZQ/tOeJW0AEb8MRQLFEhbnuJGTgQKBgQDTJGJHg2FkFvpMn46l\n+8kc8tl0+GuzplMe80Ds5omRI2/0JwSI6U+15qttm7YWulD/Bc0gNK5tmdRPwDIX\nrIObNKcj/nmzZl3iQycaFIlUpox1kIhv2dFV8Fc1wMXdhdMroTcwPjSlrJHT5Jc7\n6raHT0mDVtZZpS/FKh1XgLJFCQKBgQDOnofUyiO24V2hkjT6cRLrmSdKnHBGn05l\nLeWSi6X7ydu9gNR7bHDXUmZiSgDNVUyHTyWkN4Wm7IXiwz4lhVuhwczwbcfTcn8e\nnBAVsOubNU5ClflWXQD4hn/C6uG06rz8SzCjQc4h639Yy/33nXCG5vqQZlTf9sFf\nlH2RL8UrRwKBgQCg7np6R4lT4K+m93aizObdSby1iyOMKpnwXTh/WLhCB+CtF5A9\nSpeW7dp8ENMZP6m8t49BnOXWZAmPP87ufG9TPS6oIK5iLwQgEU8cccq62rb0ZNWZ\na0xDVI0kS2qFDhuGhbqq6r72CDKebv1Wje/R8nz1vppieaWPgiobJ9y5AQKBgQDJ\nn0lNDDPtsd18XP/1o4GjBcChviaRw8LsWO09I6jFGyWitqSiDB/Q/keKgkxmEmar\nY0CIDuYNDaFYts1eL9RK9KLXu0jTvVbut7u6bvp6anoD3/V/oSHhYt4phqrZsHba\ne0TrCrvrvbJ3JBigGLJF8f9wCWupYVExw+UEWGk+4QKBgCoqtztsIUKT+DdFztZ6\nzrB1xD3fNetTMx6PrTd/8rsQdoldN1HE6T1c2uTSeEOQiREvxGq5f3D4gFu5BMAu\nOtKLKGCKnz7d1RdVwfKWxIeT9X4IpfztlD+KpE0bGIA5/W0d/w5zRVeyFUKjnHaI\nDn4dPd7/NXNFqNWW2XWbJzXl\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-9u32f@gamer-nanny.iam.gserviceaccount.com",
+  "client_id": "111933567792133174333",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-9u32f%40gamer-nanny.iam.gserviceaccount.com"
+}

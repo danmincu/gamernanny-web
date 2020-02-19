@@ -1,0 +1,1 @@
+ .\magick.exe convert -density 384 c:\users\dan\desktop\GNLogo.svg -define icon:auto-resize c:\users\dan\desktop\icon.ico
