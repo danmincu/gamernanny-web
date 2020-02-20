@@ -1,10 +1,41 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
+import { Location } from '@angular/common';
+
+//import { NbAuthService } from '../services/auth.service';
+import { takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'fauth-root',
+  styleUrls: ['./fauth.component.scss'],
   templateUrl: './fauth.component.html',
-  styleUrls: ['./fauth.component.css']
 })
-export class FauthComponent {
-  title = 'angularfirebase-authentication';
+export class FauthComponent implements OnDestroy {
+
+  private destroy$ = new Subject<void>();
+
+  subscription: any;
+
+  authenticated: boolean = false;
+  token: string = '';
+
+  // showcase of how to use the onAuthenticationChange method
+  constructor(/*protected auth: NbAuthService,*/ protected location: Location) {
+
+    /*this.subscription = auth.onAuthenticationChange()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe((authenticated: boolean) => {
+        this.authenticated = authenticated;
+      });*/
+  }
+
+  back() {
+    this.location.back();
+    return false;
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
 }

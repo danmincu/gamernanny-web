@@ -81,7 +81,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
       this.menuService.onItemClick()
       .pipe(
-        tap(m => console.log(m)),
+        // tap(m => console.log(m)),
         filter(({ tag }) => tag === 'user-context-menu'),
         map((item) => (item.item as any).tag),
         filter(t => !!t)

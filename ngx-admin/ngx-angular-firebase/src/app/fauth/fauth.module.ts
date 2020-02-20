@@ -27,6 +27,21 @@ import { FauthService } from "./shared/services/fauth.service";
 import { AuthGuard } from './shared/guard/auth.guard';
 
 
+//import { NbAuthBlockComponent } from '@nebular/theme/';
+
+import {
+  NbAlertModule,
+  NbButtonModule,
+  NbCardModule,
+  NbCheckboxModule,
+  NbIconModule,
+  NbInputModule,
+  NbLayoutModule,
+} from '@nebular/theme';
+
+import { NbAuthModule } from '@nebular/auth';
+
+
 @NgModule({
   declarations: [
     FauthComponent,
@@ -37,6 +52,17 @@ import { AuthGuard } from './shared/guard/auth.guard';
     VerifyEmailComponent
   ],
   imports: [
+
+    NbAuthModule, 
+    NbLayoutModule,
+    NbCardModule,
+    NbCheckboxModule,
+    NbAlertModule,
+    NbInputModule,
+    NbButtonModule,
+    NbIconModule,
+    
+
  //   BrowserModule,
     CommonModule,
     FauthRoutingModule,
