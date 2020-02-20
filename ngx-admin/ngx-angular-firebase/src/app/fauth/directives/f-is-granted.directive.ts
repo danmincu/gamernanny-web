@@ -1,5 +1,5 @@
 import { Directive, Input, OnDestroy, TemplateRef, ViewContainerRef } from '@angular/core';
-import { takeUntil, map, tap } from 'rxjs/operators';
+import { takeUntil, map, tap, mergeAll } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 import { FauthService } from '../shared/services/fauth.service';
 
@@ -15,33 +15,26 @@ export class FIsGrantedDirective implements OnDestroy {
 
   constructor(private templateRef: TemplateRef<any>,
               private viewContainer: ViewContainerRef,
-              private accessChecker: FauthService) {
+              private authService: FauthService) {
   }
 
-  @Input() set fIsGranted([claim, value]: [string, string]) {
-
-    console.log("fIsGranted");
-    this.accessChecker.customclaims$
-      .pipe(
-        //tap(c => console.log("here")),
-        takeUntil(this.destroy$),
-        map((claims) => { 
-            // console.log(String(claims[claim]));
-            // console.log(String(claim));
-            // console.log(String(value));
-            // console.log(String(claims[claim]) === String(value));
-            return String(claims[claim]) === String(value);
-        })
-      )
-      .subscribe((can: boolean) => {
-        if (can && !this.hasView) {
-          this.viewContainer.createEmbeddedView(this.templateRef);
-          this.hasView = true;
-        } else if (!can && this.hasView) {
-          this.viewContainer.clear();
-          this.hasView = false;
-        }
-      });
+  @Input() set fIsGranted([claim, value, evaluatedOnLoginOnly]: [string, string, boolean]) {
+      this.authService.customclaims$
+        .pipe(
+          //tap(c => console.log(c)),
+          takeUntil(this.destroy$),
+          map((claims) => {
+            return !!claims ? String(claims[claim]) === String(value) : !(!!evaluatedOnLoginOnly);
+          })
+        ).subscribe((can: boolean) => {
+          if (can && !this.hasView) {
+            this.viewContainer.createEmbeddedView(this.templateRef);
+            this.hasView = true;
+          } else if (!can && this.hasView) {
+            this.viewContainer.clear();
+            this.hasView = false;
+          }
+        });
   }
 
   ngOnDestroy() {

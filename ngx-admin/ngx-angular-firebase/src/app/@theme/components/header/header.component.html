@@ -12,8 +12,8 @@
 
 <div class="header-container">
   <nb-actions size="small">
-    <!-- example: search is only available for tech support -->
-    <nb-action *fIsGranted="['techSupport', 'true']"  class="control-item">
+    <!-- example: search is only available for tech support and only if logged in-->
+    <nb-action *fIsGranted="['techSupport', 'true', true]"  class="control-item">
       <nb-search type="rotate-layout"></nb-search>
     </nb-action>
     <nb-action class="control-item" icon="email-outline"></nb-action>

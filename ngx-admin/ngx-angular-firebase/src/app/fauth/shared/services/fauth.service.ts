@@ -33,7 +33,9 @@ export class FauthService {
         JSON.parse(localStorage.getItem('user'));
       }
     });
-    this.customclaims$ = this.afAuth.idTokenResult.pipe(filter(m =>  m && !!m.claims), map((t) => t.claims));
+    // this.customclaims$ = this.afAuth.idTokenResult.pipe(filter(m =>  m && !!m.claims), map((t) => t.claims));
+    this.customclaims$ = this.afAuth.idTokenResult.pipe(map((t) => !!t ? t.claims : null));
+
   }
 
   // Sign in with email/password
