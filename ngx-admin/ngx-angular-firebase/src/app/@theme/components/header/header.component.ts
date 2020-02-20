@@ -1,10 +1,11 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { NbMediaBreakpointsService, NbMenuService, NbSidebarService, NbThemeService } from '@nebular/theme';
+import { Component, OnDestroy, OnInit, Inject } from '@angular/core';
+import { NbMediaBreakpointsService, NbMenuService, NbSidebarService, NbThemeService, NB_WINDOW } from '@nebular/theme';
 
 import { UserData } from '../../../@core/data/users';
 import { LayoutService } from '../../../@core/utils';
-import { map, takeUntil } from 'rxjs/operators';
+import { map, takeUntil, filter, tap } from 'rxjs/operators';
 import { Subject } from 'rxjs';
+import { FauthService } from '../../../fauth/shared/services/fauth.service';
 
 @Component({
   selector: 'ngx-header',
@@ -42,14 +43,16 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   currentTheme = 'nanny';
 
-  userMenu = [ { title: 'Profile' }, { title: 'Log out' } ];
+  userMenu = [ { title: 'Profile' }, { title: 'Log out', tag: "logout" } ];
 
   constructor(private sidebarService: NbSidebarService,
               private menuService: NbMenuService,
               private themeService: NbThemeService,
               private userService: UserData,
               private layoutService: LayoutService,
-              private breakpointService: NbMediaBreakpointsService) {
+              private breakpointService: NbMediaBreakpointsService,
+              @Inject(NB_WINDOW) private window,
+              private authService: FauthService) {
   }
 
   ngOnInit() {
@@ -75,11 +78,33 @@ export class HeaderComponent implements OnInit, OnDestroy {
         takeUntil(this.destroy$),
       )
       .subscribe(themeName => this.currentTheme = themeName);
+
+      this.menuService.onItemClick()
+      .pipe(
+        tap(m => console.log(m)),
+        filter(({ tag }) => tag === 'user-context-menu'),
+        map((item) => (item.item as any).tag),
+        filter(t => !!t)
+      )
+      .subscribe(tag => this.menuAction(tag));
   }
 
   ngOnDestroy() {
     this.destroy$.next();
     this.destroy$.complete();
+  }
+
+  menuAction(tag: string)
+  {
+    if (tag === 'logout') {
+      this.logout();
+    }
+  }
+
+  logout()
+  {
+    this.authService.SignOut();
+    //this.window.alert("logging out");
   }
 
   changeTheme(themeName: string) {

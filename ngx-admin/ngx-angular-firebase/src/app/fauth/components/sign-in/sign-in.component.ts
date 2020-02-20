@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectorRef, NgZone } from '@angular/core';
-import { AuthService } from "../../shared/services/auth.service";
+import { FauthService } from "../../shared/services/fauth.service";
 import { WindowService } from '../../window.service';
 import { Router } from '@angular/router';
 import * as firebase from 'firebase';
@@ -29,7 +29,7 @@ export class SignInComponent implements OnInit {
 
 
   constructor(private win: WindowService, 
-    public authService: AuthService,
+    public authService: FauthService,
     private router: Router,
     private cdRef: ChangeDetectorRef,  
     public ngZone: NgZone // NgZone service to remove outside scope warning

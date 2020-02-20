@@ -228,7 +228,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     children: [
       {
         title: 'Firebase Login',
-        link: '/auth/firebase-login',
+        link: '/fauth/login',
       },
       {
         title: 'Login',

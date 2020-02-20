@@ -1,4 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
+//import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 // Reactive Form
@@ -22,7 +23,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../../environments/environment';
 
 // Auth service
-import { AuthService } from "./shared/services/auth.service";
+import { FauthService } from "./shared/services/fauth.service";
+import { AuthGuard } from './shared/guard/auth.guard';
 
 
 @NgModule({
@@ -35,7 +37,8 @@ import { AuthService } from "./shared/services/auth.service";
     VerifyEmailComponent
   ],
   imports: [
-    BrowserModule,
+ //   BrowserModule,
+    CommonModule,
     FauthRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
@@ -43,7 +46,8 @@ import { AuthService } from "./shared/services/auth.service";
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [AuthService],
+  exports: [FauthComponent],
+  providers: [FauthService],
   // bootstrap: [FauthComponent]
 })
 

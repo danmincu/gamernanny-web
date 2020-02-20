@@ -9,12 +9,12 @@ import { ForgotPasswordComponent } from '../../components/forgot-password/forgot
 import { VerifyEmailComponent } from '../../components/verify-email/verify-email.component';
 
 // Import canActivate guard services
-import { AuthGuard } from "../guard/auth.guard";
 import { SecureInnerPagesGuard } from "../guard/secure-inner-pages.guard";
 
 // Include route guard in routes array
 const routes: Routes = [
-  { path: '', redirectTo: '/sign-in', pathMatch: 'full'},
+  // { path: 'firebase-login', redirectTo: '/sign-in', pathMatch: 'full'},
+  { path: 'login', component: SignInComponent, canActivate: [SecureInnerPagesGuard]}, 
   { path: 'sign-in', component: SignInComponent, canActivate: [SecureInnerPagesGuard]},
   { path: 'register-user', component: SignUpComponent, canActivate: [SecureInnerPagesGuard]},
   //{ path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
