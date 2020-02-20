@@ -40,16 +40,18 @@ import {
 } from '@nebular/theme';
 
 import { NbAuthModule } from '@nebular/auth';
+import { FIsGrantedDirective } from './directives/f-is-granted.directive';
 
 
 @NgModule({
   declarations: [
+    FIsGrantedDirective,
     FauthComponent,
     SignInComponent,
     SignUpComponent,
    // DashboardComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent    
   ],
   imports: [
 
@@ -61,9 +63,9 @@ import { NbAuthModule } from '@nebular/auth';
     NbInputModule,
     NbButtonModule,
     NbIconModule,
-    
 
- //   BrowserModule,
+
+    //   BrowserModule,
     CommonModule,
     FauthRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
@@ -72,7 +74,7 @@ import { NbAuthModule } from '@nebular/auth';
     ReactiveFormsModule,
     FormsModule
   ],
-  exports: [FauthComponent],
+  exports: [FauthComponent,  FIsGrantedDirective],
   providers: [FauthService],
   // bootstrap: [FauthComponent]
 })
