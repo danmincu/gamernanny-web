@@ -88,6 +88,7 @@ export class FauthService {
     return this.afAuth.auth.sendPasswordResetEmail(passwordResetEmail)
     .then(() => {
       window.alert('Password reset email sent, check your inbox.');
+      this.router.navigateByUrl('/fauth/login');
     }).catch((error) => {
       window.alert(error);
     });
