@@ -1,32 +1,36 @@
 <!-- <div class="row"> -->
     <div class="col-xxl-7">
-        <nb-card>
-            <nb-card-body>
-                <p><b>Control</b> your children gaming habits!</p>
+        <nb-card accent="info">
+           <nb-card-header>
+            <p><b>Control</b> your children gaming screen time!</p>
+           </nb-card-header>
+            <nb-card-body>                
                 <p><b>Decide</b> when and for how long is your kid playing video games!</p>
-                <p><b>Reward</b> your kid for good school grades and good behaviour by gifting <i>special codes</i> to temporarily bypass videogaming restrictions!</p>
-                <p>Gammer nanny is a <b>polite</b> piece of techology kindly informing children when their gaming time is about to expire.</p>
+                <p><b>Reward</b> your kid for good school grades and good behaviour by gifting <i>special codes</i> to temporarily bypass restrictions!</p>
+                <p>Gammer nanny is a <b>polite</b> piece of techology kindly informing children when their time is about to expire.</p>
             </nb-card-body>
             <nb-card-footer>
                 Special thanks to <b><A HREF="mailto:nicholas.mincu@gmail.com">nicholas.mincu@gmail.com</A></b> - the main reason for which this software is being built!
             </nb-card-footer>
         </nb-card>
     </div>
-    <div class="col-xxl-5">
+     <div class="col-xxl-5" style="margin-top: 2rem;">
       <div class="row">
         <div class="col-md-6">
             <div>Installation</div>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/i39RADybY94" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe style="transform: scale(0.8);" width="100%" height="315" src="https://www.youtube.com/embed/i39RADybY94" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="col-md-6">
             <div>Capabilities</div>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/r536pi-5q3s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe style="transform: scale(0.8);" width="100%" height="315" src="https://www.youtube.com/embed/r536pi-5q3s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
+     </div>
   
-      <div class="row" style="background-image: url('../../../assets/resources/GamerNanny.png'); background-blend-mode: lighten;">
-          
-              <nb-card status="warning" style="opacity: 0.95;">
+     <div class="col-xxl-7">
+      <!-- style="background-image: url('../../../assets/resources/GamerNanny.png'); background-blend-mode: lighten;" -->
+      <!-- <div class="row" style="margin-top: 2rem;">           -->
+              <nb-card accent="danger">
                   <nb-card-header>Attention</nb-card-header>
                   <nb-card-body>
                     <p *loginGranted="[true]">You need to be <b>signed-in</b> to dowload the <b>installer</b>. You may need special permissions to download the <b>uninstaller</b>.</p>                
@@ -39,26 +43,28 @@
                   <a id="phone"></a>
                   when asked!
                 </nb-card-footer>
-              </nb-card>
-           
-       </div>
+              </nb-card>           
+       <!-- </div> -->
+      </div>
 
+      <div class="col-xxl-7">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" style="margin-top: 1rem;">
             <form *loginGranted="[false]" method="get" action="../../../assets/windows-app/GNInstall.exe">
                 <button nbButton status="success" type="submit"><i class="fa fa-download"></i> Download Gammer Nanny!</button>
               </form>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" style="margin-top: 1rem;margin-bottom: 1rem;">
                     <!-- temp disabled to prevent kids from uninstalling it-->
                     <form *claimGranted="['techSupport', 'true', true]" method="get" action="../../../assets/windows-app/GNUninstall.exe">
                         <button nbButton status="danger" type="submit"><i class="fa fa-download"></i> Download Uninstaller!</button>
                      </form>
         </div>
       </div>
-
-
     </div>
+
+
+    
   <!-- </div> -->
     
     <!-- <nb-sidebar>
