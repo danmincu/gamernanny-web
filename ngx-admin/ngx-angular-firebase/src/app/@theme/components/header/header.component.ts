@@ -21,24 +21,25 @@ export class HeaderComponent implements OnInit, OnDestroy {
   themes = [
     {
       value: 'nanny',
-      name: 'Nanny',
+      name: 'Dark',
     },
     {
       value: 'default',
       name: 'Light',
-    },
-    {
-      value: 'dark',
-      name: 'Dark',
-    },
-    {
-      value: 'cosmic',
-      name: 'Cosmic',      
-    },
-    {
-      value: 'corporate',
-      name: 'Corporate',
-    },
+    }
+    // ,
+    // {
+    //   value: 'dark',
+    //   name: 'Dark',
+    // },
+    // {
+    //   value: 'cosmic',
+    //   name: 'Cosmic',      
+    // },
+    // {
+    //   value: 'corporate',
+    //   name: 'Corporate',
+    // },
   ];
 
   currentTheme = 'nanny';
@@ -56,13 +57,21 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    //this.themeService.changeTheme(this.currentTheme);    
+    this.currentTheme = this.themeService.currentTheme;
     
-    this.themeService.changeTheme(this.currentTheme);
-    // this.currentTheme = this.themeService.currentTheme;
+    // this.userService.getUsers()
+    //   .pipe(takeUntil(this.destroy$),
+    //   tap((c) => console.log(c)))
+    //   .subscribe((users: any) => this.user = users.nick);
 
-    this.userService.getUsers()
-      .pipe(takeUntil(this.destroy$))
-      .subscribe((users: any) => this.user = users.nick);
+   this.authService.afAuth.user
+   .pipe(takeUntil(this.destroy$))
+   .subscribe((u : any) => 
+   !!u ? 
+   this.user = {name:(u.displayName? u.displayName: (u.email ? u.email : u.phoneNumber)),
+     picture: u.photoURL} : 
+   this.user = {name:null, picture: null});
 
     const { xl } = this.breakpointService.getBreakpointsMap();
     this.themeService.onMediaQueryChange()
@@ -79,6 +88,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       )
       .subscribe(themeName => this.currentTheme = themeName);
 
+      // this is how the menu service click is implemented
       this.menuService.onItemClick()
       .pipe(
         // tap(m => console.log(m)),
