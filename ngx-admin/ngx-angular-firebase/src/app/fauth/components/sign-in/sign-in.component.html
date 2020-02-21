@@ -1,40 +1,50 @@
-<div class="displayTable">
+<!-- style="background: none;" -->
+<div class="displayTable" >
   <div class="displayTableCell">
 
     <div class="authBlock">
       <h3>Sign In</h3>
 
       <div [hidden]="user" class="formGroup center">
-    
+
         <div [hidden]="hideCaptcha" class="label">Resolve reCaptcha for phone login!
-          <div id="recaptcha-container"></div>
+          <div style="transform: scale(0.8);" id="recaptcha-container"></div>
         </div>
-       
-        <div style="margin-top: 10px;">
+        <div class="label">No previous sign-up needed for phone login!</div>
+        <div >
+          <!-- style="margin-top: 10px;" -->
             <div
             style="float: left;
             width: auto;
-            height: 33px;
-            padding: 6px 5px;
+            height: 24px;
+            padding: 2px 2px;
             border: 0px solid #e7e7e7;
             outline: none;
             font-size: 15px;
             font-weight: 700;
-            color: #444444;
+            color: #aaaaaa;
             background-color: transparent;
             background: transparent;">+</div>
-            <input class="formControl left-div" style="width: 49px;" type="text" [(ngModel)]="phoneNumber.country" placeholder="1" maxlength="2">
-            <input class="formControl left-div" style="width: 69px;" type="text" [(ngModel)]="phoneNumber.area" placeholder="613"  maxlength="3">
-            <input class="formControl left-div" style="width: 69px;" type="text" [(ngModel)]="phoneNumber.prefix" placeholder="555"  maxlength="3">
-            <input class="formControl left-div" style="width: 68px;" type="text" [(ngModel)]="phoneNumber.line" placeholder="5555" maxlength="4">
-      
-            <button class="btn facebookBtn" [hidden]="hideSendSms" (click)="sendLoginCode()" style="margin-top: 10px;">SMS Text Login Code</button>
-         
-            <div class="formGroup" *ngIf="windowRef.confirmationResult" style="margin-top: 10px;">        
+            <input class="formControl left-div" style="width: 2.5rem;"
+             type="text" [(ngModel)]="phoneNumber.country" placeholder="1" maxlength="2">
+            <input class="formControl left-div" style="width: 3.3rem;" 
+              type="text" [(ngModel)]="phoneNumber.area" placeholder="613" maxlength="3">
+            <input class="formControl left-div" 
+              style="width: 3.3rem;" type="text" [(ngModel)]="phoneNumber.prefix" placeholder="555"  maxlength="3">
+            <input class="formControl left-div" 
+            style="width: 4rem;;"
+             type="text"
+             [(ngModel)]="phoneNumber.line"
+            placeholder="5555" maxlength="4">
+
+            <button class="btn facebookBtn" [hidden]="hideSendSms" (click)="sendLoginCode()"
+             style="margin-top: 10px;">SMS Text Login Code</button>
+
+            <div class="formGroup" *ngIf="windowRef.confirmationResult" style="margin-top: 10px;">
               <input class="formControl left-div" type="text" name="code" style="width: 100%;" placeholder="Verification Code" [(ngModel)]="verificationCode">
               <button class="btn btnPrimary" style="margin-top: 10px;" (click)="verifyLoginCode()">Log in with phone</button>
             </div>
-          
+
         </div>
       </div>
 
@@ -59,6 +69,15 @@
         <span routerLink="/fauth/forgot-password">Forgot your password?</span>
       </div>
 
+      <!-- <div class="formGroup">
+        <span class="or"><span class="orInner"></span></span>
+      </div> -->
+
+      <div class="redirectToLogin">
+        <span>Don't have an account? </span>
+        <span class="redirect" routerLink="/fauth/register-user">Sign Up with Email</span>
+      </div>
+
       <div class="formGroup">
         <span class="or"><span class="orInner">Or</span></span>
       </div>
@@ -71,15 +90,7 @@
         </button>
       </div>
 
-      <div class="formGroup">
-        <span class="or"><span class="orInner"></span></span>
-      </div>
-
-      <div class="redirectToLogin">
-        <span>Don't have an account? <span class="redirect" routerLink="/fauth/register-user">Sign Up</span></span>
-      </div>
-
-    </div>    
+    </div>
 
   </div>
 </div>
