@@ -8,6 +8,7 @@ import { ECommerceModule } from './e-commerce/e-commerce.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
 import { AboutComponent } from './about/about.component';
+import { FauthModule } from '../fauth/fauth.module';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { AboutComponent } from './about/about.component';
     NbButtonModule,
     NbLayoutModule,
     NbSidebarModule,
+    FauthModule,
     NbCardModule,
     DashboardModule,
     ECommerceModule,
