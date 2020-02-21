@@ -6,8 +6,8 @@ import { FauthService } from '../shared/services/fauth.service';
 // note: this is only differentiating between the logged in users, another "gate" should be 
 // used for logged vs not logged users.
 
-@Directive({ selector: '[fIsGranted]'})
-export class FIsGrantedDirective implements OnDestroy {
+@Directive({ selector: '[loginGranted]'})
+export class LoginGrantedDirective implements OnDestroy {
 
   private destroy$ = new Subject<void>();
 
@@ -18,13 +18,17 @@ export class FIsGrantedDirective implements OnDestroy {
               private authService: FauthService) {
   }
 
-  @Input() set fIsGranted([claim, value, evaluatedOnLoginOnly]: [string, string, boolean]) {
+  @Input() set loginGranted([negate]: [boolean?]) {
       this.authService.customclaims$
         .pipe(
           //tap(c => console.log(c)),
           takeUntil(this.destroy$),
           map((claims) => {
-            return !!claims ? String(claims[claim]) === String(value) : !(!!evaluatedOnLoginOnly);
+            if (!(!!negate)) {
+              return !!claims ? true : false;
+            } else {
+              return !!claims ? false : true;
+            }
           })
         ).subscribe((can: boolean) => {
           if (can && !this.hasView) {

@@ -1,4 +1,3 @@
-//import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
@@ -12,7 +11,6 @@ import { FauthRoutingModule } from './shared/routing/fauth-routing.module';
 import { FauthComponent } from './fauth.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
-// import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 
@@ -24,10 +22,6 @@ import { environment } from '../../environments/environment';
 
 // Auth service
 import { FauthService } from "./shared/services/fauth.service";
-import { AuthGuard } from './shared/guard/auth.guard';
-
-
-//import { NbAuthBlockComponent } from '@nebular/theme/';
 
 import {
   NbAlertModule,
@@ -40,21 +34,21 @@ import {
 } from '@nebular/theme';
 
 import { NbAuthModule } from '@nebular/auth';
-import { FIsGrantedDirective } from './directives/f-is-granted.directive';
+import { ClaimGrantedDirective } from './directives/claim-granted.directive';
+import { LoginGrantedDirective } from './directives/login-granted.directive';
 
 
 @NgModule({
   declarations: [
-    FIsGrantedDirective,
+    ClaimGrantedDirective,
+    LoginGrantedDirective,
     FauthComponent,
     SignInComponent,
     SignUpComponent,
-   // DashboardComponent,
     ForgotPasswordComponent,
     VerifyEmailComponent    
   ],
   imports: [
-
     NbAuthModule, 
     NbLayoutModule,
     NbCardModule,
@@ -63,9 +57,6 @@ import { FIsGrantedDirective } from './directives/f-is-granted.directive';
     NbInputModule,
     NbButtonModule,
     NbIconModule,
-
-
-    //   BrowserModule,
     CommonModule,
     FauthRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
@@ -74,9 +65,8 @@ import { FIsGrantedDirective } from './directives/f-is-granted.directive';
     ReactiveFormsModule,
     FormsModule
   ],
-  exports: [FauthComponent,  FIsGrantedDirective],
-  providers: [FauthService],
-  // bootstrap: [FauthComponent]
+  exports: [FauthComponent, ClaimGrantedDirective, LoginGrantedDirective],
+  providers: [FauthService]
 })
 
 export class FauthModule { }
