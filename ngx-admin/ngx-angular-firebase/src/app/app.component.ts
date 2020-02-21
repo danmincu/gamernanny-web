@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.analytics.trackPageViews();
     this.seoService.trackCanonicalChanges();
-    setTimeout(() => {this.doneLoading.next(true)}, 4000);
-    this.authService.customclaims$.subscribe((c)=> console.log(c));
+    setTimeout(() => {this.doneLoading.next(true)}, 2);
+    //this.authService.customclaims$.subscribe((c)=> console.log(c));
   }
 }
