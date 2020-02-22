@@ -40,28 +40,36 @@ export class FauthService {
 
   // Sign in with email/password
   SignIn(email, password) {
-    try {
+    this.afAuth.auth.signOut().then(() =>
+    {try {
       return this.afAuth.auth.signInWithEmailAndPassword(email, password)
       .then((result) => {
         if (result.user && !result.user.emailVerified) {
-          this.afAuth.auth.signOut();
-          throw new Error(`We have sent a confirmation email to ${email}.` +
-          `\nPlease check your email and click on the link to verfiy your email address.`);
-        } else if (this.localStorageEmailIsNotVerified && result.user && result.user.emailVerified) {
+          this.ngZone.run(() => {
+            this.router.navigateByUrl('/fauth/verify-email-address');
+          });
+          // this.afAuth.auth.signOut();
+          // throw new Error(`We have sent a confirmation email to ${email}.` +
+          // `\nPlease check your email and click on the link to verfiy your email address.`);
+        } else
+        {
+           if (this.localStorageEmailIsNotVerified && result.user && result.user.emailVerified) {
             // this is resetting the item with the latest claims (e.g. emailVerified)
             localStorage.setItem('user', JSON.stringify(result.user));
           }
-        this.ngZone.run(() => {
-          this.router.navigate(['dashboard']);
-        });
-        this.SetUserData(result.user);
+          this.ngZone.run(() => {
+            this.router.navigate(['']);
+          });
+          this.SetUserData(result.user);
+        }
       }).catch((error) => {
         window.alert(error.message);
       });
 
     } catch (error) {
       window.alert(error.message);
-    }
+    }}
+    );
   }
 
   // Sign up with email/password
@@ -81,7 +89,9 @@ export class FauthService {
   SendVerificationMail() {
     return this.afAuth.auth.currentUser.sendEmailVerification()
     .then(() => {
-      this.router.navigate(['verify-email-address']);
+      this.router.navigateByUrl('/fauth/verify-email-address');
+    }).catch((error) => {
+      window.alert(error);
     });
   }
 
@@ -147,7 +157,9 @@ export class FauthService {
   SignOut() {
     return this.afAuth.auth.signOut().then(() => {
       localStorage.removeItem('user');
-      this.router.navigate(['sign-in']);
+      this.ngZone.run(() => {
+        this.router.navigate(['/fauth/sign-in']);
+      });
     });
   }
 
