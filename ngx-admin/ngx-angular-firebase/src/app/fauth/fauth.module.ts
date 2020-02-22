@@ -31,6 +31,7 @@ import {
   NbIconModule,
   NbInputModule,
   NbLayoutModule,
+  NbSelectModule,
 } from '@nebular/theme';
 
 import { NbAuthModule } from '@nebular/auth';
@@ -51,10 +52,13 @@ import { LoginGrantedDirective } from './directives/login-granted.directive';
   imports: [
     NbAuthModule, 
     NbLayoutModule,
+    NbSelectModule,
     NbCardModule,
+    NbInputModule,
     NbCheckboxModule,
     NbAlertModule,
     NbInputModule,
+    NbLayoutModule,
     NbButtonModule,
     NbIconModule,
     CommonModule,
