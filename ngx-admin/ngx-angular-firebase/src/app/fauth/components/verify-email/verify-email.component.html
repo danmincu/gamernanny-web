@@ -1,27 +1,21 @@
-<div class="displayTable">
-  <div class="displayTableCell">
+<h1 id="title" class="title">Thank You for Registering</h1>
 
-    <div class="authBlock">
-      <h3>Thank You for Registering</h3>
-
-      <div class="formGroup" *ngIf="authService.userData as user">
-        <p class="text-center">We have sent a confirmation email to <strong>{{user.email}}</strong>.</p>
-        <p class="text-center">Please check your email and click on the link to verfiy your email address.</p>
-      </div>
-
-      <!-- Calling SendVerificationMail() method using authService Api -->
-      <div class="formGroup">
-        <button type="button" class="btn btnPrimary" (click)="authService.SendVerificationMail()">
-          <i class="fas fa-redo-alt"></i>
-          Resend Verification Email
-        </button>
-      </div>
-
-    </div>
-
-    <div class="redirectToLogin">
-      <span>Go back to?<span class="redirect" routerLink="/fauth/sign-in"> Sign in</span></span>
-    </div>
-
-  </div>
+<div class="formGroup" *ngIf="authService.userData as user">
+  <p class="sub-title">We have sent a confirmation email to <strong>{{user.email}}</strong>.</p>
+  <p class="sub-title">Please check your email and click on the link to verfiy your email address.</p>
 </div>
+
+  <form  #form="ngForm" aria-labelledby="title">
+     <button nbButton
+      fullWidth
+      status="primary"
+      size="large"
+      [disabled]="submitted || !form.valid" (click)="authService.SendVerificationMail()">
+      <i class="fas fa-redo-alt"></i>
+      Resend Verification Email
+      </button>
+</form>
+
+<section class="another-action" aria-label="login">
+  Go back to <a class="text-link" routerLink="/fauth/sign-in">Log in</a>
+</section>
