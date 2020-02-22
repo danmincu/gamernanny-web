@@ -1,18 +1,23 @@
 <nb-layout>
     <nb-layout-column>
-      <nb-card>
-        <nb-card-header>
-          <nav class="navigation">
-            <a href="#" (click)="back()" class="link back-link" aria-label="Back">
-              <nb-icon icon="arrow-back"></nb-icon>
-            </a>
-          </nav>
-        </nb-card-header>
-        <nb-card-body>
-          <nb-auth-block>
-            <router-outlet></router-outlet>
-          </nb-auth-block>
-        </nb-card-body>
-      </nb-card>
+        <nb-card>
+            <nb-card-header>
+              <nav class="navigation">
+                <a href="#" (click)="back()" class="link back-link" aria-label="Back">
+                  <nb-icon icon="arrow-back"></nb-icon>
+                </a>
+              </nav>
+            </nb-card-header>
+
+            <nb-card-body>
+              <nb-auth-block>
+                <router-outlet></router-outlet>
+              </nb-auth-block>
+            </nb-card-body>
+
+            <nb-card-footer fixed>      
+              <span class="created-by">Created with ♥ by <b><a href="mailto:danmincu@gmail.com" target="_blank">Telekad</a></b> 2020</span>
+            </nb-card-footer>
+        </nb-card>      
     </nb-layout-column>
-  </nb-layout>
+</nb-layout>

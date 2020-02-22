@@ -1,87 +1,79 @@
 <!-- style="background: none;" -->
 <h1 id="title" class="title">Login</h1>
 <section class="another-action" aria-label="Emaillogin">
-<p class="sub-title">Hello! Log in with your phone...</p>
+  <p class="sub-title">Hello! Log in with your phone...</p>
 
-<!-- <nb-alert *ngIf="showMessages.error && errors?.length && !submitted" outline="danger" role="alert">
-  <p class="alert-title"><b>Oh snap!</b></p>
-  <ul class="alert-message-list">
-    <li *ngFor="let error of errors" class="alert-message">{{ error }}</li>
-  </ul>
-</nb-alert>
+  <!-- <nb-alert *ngIf="showMessages.error && errors?.length && !submitted" outline="danger" role="alert">
+    <p class="alert-title"><b>Oh snap!</b></p>
+    <ul class="alert-message-list">
+      <li *ngFor="let error of errors" class="alert-message">{{ error }}</li>
+    </ul>
+  </nb-alert>
 
-<nb-alert *ngIf="showMessages.success && messages?.length && !submitted" outline="success" role="alert">
-  <p class="alert-title"><b>Hooray!</b></p>
-  <ul class="alert-message-list">
-    <li *ngFor="let message of messages" class="alert-message">{{ message }}</li>
-  </ul>
-</nb-alert> -->
-
-
-<div aria-labelledby="title">
-
-  <section [hidden]="hideCaptcha" class="col-xxl-7 form-control-group">
-    <label class="label">Resolve reCaptcha for phone login!</label>
-    <div style="width: 100%;">
-      <div style="transform: scale(0.8);   display: table;
-      margin: 0 auto;" id="recaptcha-container"></div>
-    </div>
-    <label class="label">No previous sign-up needed for the phone login!</label>
-  </section>
+  <nb-alert *ngIf="showMessages.success && messages?.length && !submitted" outline="success" role="alert">
+    <p class="alert-title"><b>Hooray!</b></p>
+    <ul class="alert-message-list">
+      <li *ngFor="let message of messages" class="alert-message">{{ message }}</li>
+    </ul>
+  </nb-alert> -->
 
 
-  <div class="col-xxl-7">
-    <div class="row">
-      <div class="col-md-6" style="margin-top: 1rem;">
-        <label class="label" for="country-code-select">Select the country code</label>
-        <nb-select  id="country-code-select" style="width: 12.6rem;" autofocus required size="large" name="countryCode" id="" [(ngModel)]="phoneNumber.country">
-          <nb-option data-countryCode="US" Selected value="1">USA & Canada (+1)</nb-option>
-          <nb-option-group label="Other countries">
-            <nb-option *ngFor="let countryCodes of CC" [value]="countryCodes.value">{{countryCodes.display}}</nb-option>
-          </nb-option-group>
-        </nb-select>
+      <section [hidden]="hideCaptcha" class="form-control-group">
+        
+        <div style="width: 100%;">
+          <label style="display: table;margin: 0 auto;" class="label">Resolve reCaptcha for phone login!</label>
+          <div style="transform: scale(0.8); display: table;margin: 0 auto;" id="recaptcha-container"></div>
+          <label style="display: table;margin: 0 auto;" class="label">No previous sign-up needed for the phone login!</label>
+        </div>
+        
+      </section>
+
+
+      <div>
+        <div class="row">
+          <div class="col-md-6" style="margin-top: 1rem;">
+            <label class="label" for="country-code-select">Select the country code</label>
+            <nb-select  id="country-code-select" style="width: 12.6rem;" autofocus required size="large" name="countryCode" id="" [(ngModel)]="phoneNumber.country">
+              <nb-option data-countryCode="US" Selected value="1">USA & Canada (+1)</nb-option>
+              <nb-option-group label="Other countries">
+                <nb-option *ngFor="let countryCodes of CC" [value]="countryCodes.value">{{countryCodes.display}}</nb-option>
+              </nb-option-group>
+            </nb-select>
+          </div>
+          <div class="col-md-6" style="margin-top: 1rem;">
+
+            <label class="label" for="phone-area-code">Enter the phone number:</label>
+            <span>
+                <input id="phone-area-code" nbInput  type="text" fieldSize="large" autofocus required
+                [(ngModel)]="phoneNumber.area" placeholder="222" maxlength="3"
+                style="width: 4rem;margin-right: .3rem;">
+
+                <input nbInput type="text" fieldSize="large" autofocus required
+                [(ngModel)]="phoneNumber.prefix" placeholder="555" maxlength="3"
+                style="width: 4rem;margin-right: .3rem;">
+
+                <input nbInput  type="text" fieldSize="large" autofocus required
+                [(ngModel)]="phoneNumber.line" placeholder="5555" maxlength="4"
+                style="width: 4.6rem;">
+            </span>
+
+          </div>
+        </div>
       </div>
-      <div class="col-md-6" style="margin-top: 1rem;">
-
-        <label class="label" for="phone-area-code">Enter the phone number:</label>
-        <span>
-            <input id="phone-area-code" nbInput  type="text" fieldSize="large" autofocus required
-            [(ngModel)]="phoneNumber.area" placeholder="222" maxlength="3"
-            style="width: 4rem;margin-right: .3rem;"
-            />
-            
-            <input nbInput type="text" fieldSize="large" autofocus required
-            [(ngModel)]="phoneNumber.prefix" placeholder="555" maxlength="3"
-            style="width: 4rem;margin-right: .3rem;"
-            />
-
-            <input nbInput  type="text" fieldSize="large" autofocus required
-            [(ngModel)]="phoneNumber.line" placeholder="5555" maxlength="4"
-            style="width: 4.6rem;"
-            />
-        </span>
-
-      </div>
-    </div>
-   </div>
 
 
-  <section class="another-action" aria-label="Send verification code">
-  <button nbButton fullWidth size="large" status="info" [hidden]="hideSendSms" (click)="sendLoginCode()">SMS Text Login Code</button>
-  </section>
+      <section class="another-action" aria-label="Send verification code">
+      <button nbButton fullWidth size="large" status="info" [hidden]="hideSendSms" (click)="sendLoginCode()">SMS Text Login Code</button>
+      </section>
   
-  <section class="another-action" aria-label="Send verification code" *ngIf="windowRef.confirmationResult">
-    <input nbInput
-      fullWidth fieldSize="large" type="text" name="code" placeholder="Verification Code" [(ngModel)]="verificationCode">
-    </section>
-    <section class="another-action" aria-label="Send verification code" *ngIf="windowRef.confirmationResult">
-      <button nbButton
-      fullWidth
-      status="info"
-      size="large" (click)="verifyLoginCode()">Log in with phone</button>
-    </section>
+      <section class="another-action" aria-label="Send verification code" *ngIf="windowRef.confirmationResult">
+        <input nbInput fullWidth fieldSize="large" type="text" name="code" placeholder="Verification Code" [(ngModel)]="verificationCode">
+      </section>
 
-</div>
+      <section class="another-action" aria-label="Send verification code" *ngIf="windowRef.confirmationResult">
+          <button nbButton fullWidth status="info" size="large" (click)="verifyLoginCode()">Log in with phone</button>
+      </section>
+
 </section>
 
 <section class="another-action" aria-label="Emaillogin">  

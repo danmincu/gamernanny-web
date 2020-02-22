@@ -26,7 +26,7 @@ import { FauthService } from "./shared/services/fauth.service";
 import {
   NbAlertModule,
   NbButtonModule,
-  NbCardModule,
+  NbCardModule,  
   NbCheckboxModule,
   NbIconModule,
   NbInputModule,
@@ -57,8 +57,7 @@ import { LoginGrantedDirective } from './directives/login-granted.directive';
     NbInputModule,
     NbCheckboxModule,
     NbAlertModule,
-    NbInputModule,
-    NbLayoutModule,
+    NbInputModule,    
     NbButtonModule,
     NbIconModule,
     CommonModule,
