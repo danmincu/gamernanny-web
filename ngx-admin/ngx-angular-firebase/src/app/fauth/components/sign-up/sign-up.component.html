@@ -1,41 +1,35 @@
-<div class="displayTable">
-  <div class="displayTableCell">
+<h1 id="title" class="title">Sign up</h1>
 
-    <div class="authBlock">
-      <h3>Sign Up</h3>
+<p class="sub-title">Please enter your email address to request a password reset</p>
 
-      <div class="formGroup">
-        <input type="email" class="formControl" placeholder="Email Address" #userEmail required>
-      </div>
+  <form  #form="ngForm" aria-labelledby="title">
+  <div class="form-control-group">
+    <input  style="margin-bottom: 0.3rem;" id="input-email" nbInput fullWidth type="text" placeholder="Email address"
+    fieldSize="large"
+    autofocus required #userEmail/>
+    <input  id="input-email" nbInput fullWidth type="password" placeholder="Password"
+    fieldSize="large"
+    autofocus required #userPwd/>
+   </div>
 
-      <div class="formGroup">
-        <input type="password" class="formControl" placeholder="Password" #userPwd required>
-      </div>
+   <button nbButton
+  fullWidth
+  status="primary"
+  size="large"
+  [disabled]="submitted || !form.valid" (click)="authService.SignUp(userEmail.value, userPwd.value)">
+  Sign up
+  </button>
+</form>
 
-      <div class="formGroup">
-        <input type="button" class="btn btnPrimary" value="Sign Up" (click)="authService.SignUp(userEmail.value, userPwd.value)">
-      </div>
+<section class="another-action" aria-label="Social sign in">  
+  <p class="sub-title">.. or continue with your social accounts</p>
 
-      <div class="formGroup">
-        <span class="or"><span class="orInner">Or</span></span>
-      </div>
+  <button type="button" nbButton fullWidth size="large" status="info" (click)="authService.GoogleAuth()">
+    <i class="fab fa-google-plus-g"></i>
+    Log in with Google
+  </button>
+</section>
 
-      <!-- Continue with Google -->
-      <div class="formGroup">
-        <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
-          <i class="fab fa-google-plus-g"></i>
-          Continue with Google
-        </button>
-      </div>
-
-      <div class="formGroup">
-        <span class="or"><span class="orInner"></span></span>
-      </div>
-
-      <div class="redirectToLogin">
-        <span>Already have an account? <span class="redirect" routerLink="/fauth/sign-in">Log In</span></span>
-      </div>
-
-    </div> 
-  </div>
-</div>
+<section class="another-action" aria-label="login">
+  Already have an account? <a class="text-link" routerLink="/fauth/sign-in">Log in</a>
+</section>

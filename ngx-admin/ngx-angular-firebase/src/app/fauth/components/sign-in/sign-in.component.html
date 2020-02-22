@@ -20,259 +20,263 @@
 
 <div aria-labelledby="title">
 
-  <div class="form-control-group">
-    <label [hidden]="hideCaptcha" class="label" for="input-email">Resolve reCaptcha for phone login!
-      <div style="transform: scale(0.8);translate: (0,3rem);" id="recaptcha-container"></div></label>
+  <section [hidden]="hideCaptcha" class="col-xxl-7 form-control-group">
+    <label class="label">Resolve reCaptcha for phone login!</label>
+    <div style="width: 100%;">
+      <div style="transform: scale(0.8);   display: table;
+      margin: 0 auto;" id="recaptcha-container"></div>
+    </div>
     <label class="label">No previous sign-up needed for the phone login!</label>
-  </div>
+  </section>
 
-<!--  
-  <select nbSelect name="countryCode" id="" [(ngModel)]="phoneNumber.country">
-    <option data-countryCode="US" value="1">USA & Canada (+1)</option>
-    <optgroup label="Other countries">
-      <option data-countryCode="DZ" value="213">Algeria (+213)</option>
-      <option data-countryCode="AD" value="376">Andorra (+376)</option>
-      <option data-countryCode="AO" value="244">Angola (+244)</option>
-      <option data-countryCode="AI" value="1264">Anguilla (+1264)</option>
-      <option data-countryCode="AG" value="1268">Antigua &amp; Barbuda (+1268)</option>
-      <option data-countryCode="AR" value="54">Argentina (+54)</option>
-      <option data-countryCode="AM" value="374">Armenia (+374)</option>
-      <option data-countryCode="AW" value="297">Aruba (+297)</option>
-      <option data-countryCode="AU" value="61">Australia (+61)</option>
-      <option data-countryCode="AT" value="43">Austria (+43)</option>
-      <option data-countryCode="AZ" value="994">Azerbaijan (+994)</option>
-      <option data-countryCode="BS" value="1242">Bahamas (+1242)</option>
-      <option data-countryCode="BH" value="973">Bahrain (+973)</option>
-      <option data-countryCode="BD" value="880">Bangladesh (+880)</option>
-      <option data-countryCode="BB" value="1246">Barbados (+1246)</option>
-      <option data-countryCode="BY" value="375">Belarus (+375)</option>
-      <option data-countryCode="BE" value="32">Belgium (+32)</option>
-      <option data-countryCode="BZ" value="501">Belize (+501)</option>
-      <option data-countryCode="BJ" value="229">Benin (+229)</option>
-      <option data-countryCode="BM" value="1441">Bermuda (+1441)</option>
-      <option data-countryCode="BT" value="975">Bhutan (+975)</option>
-      <option data-countryCode="BO" value="591">Bolivia (+591)</option>
-      <option data-countryCode="BA" value="387">Bosnia Herzegovina (+387)</option>
-      <option data-countryCode="BW" value="267">Botswana (+267)</option>
-      <option data-countryCode="BR" value="55">Brazil (+55)</option>
-      <option data-countryCode="BN" value="673">Brunei (+673)</option>
-      <option data-countryCode="BG" value="359">Bulgaria (+359)</option>
-      <option data-countryCode="BF" value="226">Burkina Faso (+226)</option>
-      <option data-countryCode="BI" value="257">Burundi (+257)</option>
-      <option data-countryCode="KH" value="855">Cambodia (+855)</option>
-      <option data-countryCode="CM" value="237">Cameroon (+237)</option>
-      <option data-countryCode="CA" value="1">Canada (+1)</option>
-      <option data-countryCode="CV" value="238">Cape Verde Islands (+238)</option>
-      <option data-countryCode="KY" value="1345">Cayman Islands (+1345)</option>
-      <option data-countryCode="CF" value="236">Central African Republic (+236)</option>
-      <option data-countryCode="CL" value="56">Chile (+56)</option>
-      <option data-countryCode="CN" value="86">China (+86)</option>
-      <option data-countryCode="CO" value="57">Colombia (+57)</option>
-      <option data-countryCode="KM" value="269">Comoros (+269)</option>
-      <option data-countryCode="CG" value="242">Congo (+242)</option>
-      <option data-countryCode="CK" value="682">Cook Islands (+682)</option>
-      <option data-countryCode="CR" value="506">Costa Rica (+506)</option>
-      <option data-countryCode="HR" value="385">Croatia (+385)</option>
-      <option data-countryCode="CU" value="53">Cuba (+53)</option>
-      <option data-countryCode="CY" value="90392">Cyprus North (+90392)</option>
-      <option data-countryCode="CY" value="357">Cyprus South (+357)</option>
-      <option data-countryCode="CZ" value="42">Czech Republic (+42)</option>
-      <option data-countryCode="DK" value="45">Denmark (+45)</option>
-      <option data-countryCode="DJ" value="253">Djibouti (+253)</option>
-      <option data-countryCode="DM" value="1809">Dominica (+1809)</option>
-      <option data-countryCode="DO" value="1809">Dominican Republic (+1809)</option>
-      <option data-countryCode="EC" value="593">Ecuador (+593)</option>
-      <option data-countryCode="EG" value="20">Egypt (+20)</option>
-      <option data-countryCode="SV" value="503">El Salvador (+503)</option>
-      <option data-countryCode="GQ" value="240">Equatorial Guinea (+240)</option>
-      <option data-countryCode="ER" value="291">Eritrea (+291)</option>
-      <option data-countryCode="EE" value="372">Estonia (+372)</option>
-      <option data-countryCode="ET" value="251">Ethiopia (+251)</option>
-      <option data-countryCode="FK" value="500">Falkland Islands (+500)</option>
-      <option data-countryCode="FO" value="298">Faroe Islands (+298)</option>
-      <option data-countryCode="FJ" value="679">Fiji (+679)</option>
-      <option data-countryCode="FI" value="358">Finland (+358)</option>
-      <option data-countryCode="FR" value="33">France (+33)</option>
-      <option data-countryCode="GF" value="594">French Guiana (+594)</option>
-      <option data-countryCode="PF" value="689">French Polynesia (+689)</option>
-      <option data-countryCode="GA" value="241">Gabon (+241)</option>
-      <option data-countryCode="GM" value="220">Gambia (+220)</option>
-      <option data-countryCode="GE" value="7880">Georgia (+7880)</option>
-      <option data-countryCode="DE" value="49">Germany (+49)</option>
-      <option data-countryCode="GH" value="233">Ghana (+233)</option>
-      <option data-countryCode="GI" value="350">Gibraltar (+350)</option>
-      <option data-countryCode="GR" value="30">Greece (+30)</option>
-      <option data-countryCode="GL" value="299">Greenland (+299)</option>
-      <option data-countryCode="GD" value="1473">Grenada (+1473)</option>
-      <option data-countryCode="GP" value="590">Guadeloupe (+590)</option>
-      <option data-countryCode="GU" value="671">Guam (+671)</option>
-      <option data-countryCode="GT" value="502">Guatemala (+502)</option>
-      <option data-countryCode="GN" value="224">Guinea (+224)</option>
-      <option data-countryCode="GW" value="245">Guinea - Bissau (+245)</option>
-      <option data-countryCode="GY" value="592">Guyana (+592)</option>
-      <option data-countryCode="HT" value="509">Haiti (+509)</option>
-      <option data-countryCode="HN" value="504">Honduras (+504)</option>
-      <option data-countryCode="HK" value="852">Hong Kong (+852)</option>
-      <option data-countryCode="HU" value="36">Hungary (+36)</option>
-      <option data-countryCode="IS" value="354">Iceland (+354)</option>
-      <option data-countryCode="IN" value="91">India (+91)</option>
-      <option data-countryCode="ID" value="62">Indonesia (+62)</option>
-      <option data-countryCode="IR" value="98">Iran (+98)</option>
-      <option data-countryCode="IQ" value="964">Iraq (+964)</option>
-      <option data-countryCode="IE" value="353">Ireland (+353)</option>
-      <option data-countryCode="IL" value="972">Israel (+972)</option>
-      <option data-countryCode="IT" value="39">Italy (+39)</option>
-      <option data-countryCode="JM" value="1876">Jamaica (+1876)</option>
-      <option data-countryCode="JP" value="81">Japan (+81)</option>
-      <option data-countryCode="JO" value="962">Jordan (+962)</option>
-      <option data-countryCode="KZ" value="7">Kazakhstan (+7)</option>
-      <option data-countryCode="KE" value="254">Kenya (+254)</option>
-      <option data-countryCode="KI" value="686">Kiribati (+686)</option>
-      <option data-countryCode="KP" value="850">Korea North (+850)</option>
-      <option data-countryCode="KR" value="82">Korea South (+82)</option>
-      <option data-countryCode="KW" value="965">Kuwait (+965)</option>
-      <option data-countryCode="KG" value="996">Kyrgyzstan (+996)</option>
-      <option data-countryCode="LA" value="856">Laos (+856)</option>
-      <option data-countryCode="LV" value="371">Latvia (+371)</option>
-      <option data-countryCode="LB" value="961">Lebanon (+961)</option>
-      <option data-countryCode="LS" value="266">Lesotho (+266)</option>
-      <option data-countryCode="LR" value="231">Liberia (+231)</option>
-      <option data-countryCode="LY" value="218">Libya (+218)</option>
-      <option data-countryCode="LI" value="417">Liechtenstein (+417)</option>
-      <option data-countryCode="LT" value="370">Lithuania (+370)</option>
-      <option data-countryCode="LU" value="352">Luxembourg (+352)</option>
-      <option data-countryCode="MO" value="853">Macao (+853)</option>
-      <option data-countryCode="MK" value="389">Macedonia (+389)</option>
-      <option data-countryCode="MG" value="261">Madagascar (+261)</option>
-      <option data-countryCode="MW" value="265">Malawi (+265)</option>
-      <option data-countryCode="MY" value="60">Malaysia (+60)</option>
-      <option data-countryCode="MV" value="960">Maldives (+960)</option>
-      <option data-countryCode="ML" value="223">Mali (+223)</option>
-      <option data-countryCode="MT" value="356">Malta (+356)</option>
-      <option data-countryCode="MH" value="692">Marshall Islands (+692)</option>
-      <option data-countryCode="MQ" value="596">Martinique (+596)</option>
-      <option data-countryCode="MR" value="222">Mauritania (+222)</option>
-      <option data-countryCode="YT" value="269">Mayotte (+269)</option>
-      <option data-countryCode="MX" value="52">Mexico (+52)</option>
-      <option data-countryCode="FM" value="691">Micronesia (+691)</option>
-      <option data-countryCode="MD" value="373">Moldova (+373)</option>
-      <option data-countryCode="MC" value="377">Monaco (+377)</option>
-      <option data-countryCode="MN" value="976">Mongolia (+976)</option>
-      <option data-countryCode="MS" value="1664">Montserrat (+1664)</option>
-      <option data-countryCode="MA" value="212">Morocco (+212)</option>
-      <option data-countryCode="MZ" value="258">Mozambique (+258)</option>
-      <option data-countryCode="MN" value="95">Myanmar (+95)</option>
-      <option data-countryCode="NA" value="264">Namibia (+264)</option>
-      <option data-countryCode="NR" value="674">Nauru (+674)</option>
-      <option data-countryCode="NP" value="977">Nepal (+977)</option>
-      <option data-countryCode="NL" value="31">Netherlands (+31)</option>
-      <option data-countryCode="NC" value="687">New Caledonia (+687)</option>
-      <option data-countryCode="NZ" value="64">New Zealand (+64)</option>
-      <option data-countryCode="NI" value="505">Nicaragua (+505)</option>
-      <option data-countryCode="NE" value="227">Niger (+227)</option>
-      <option data-countryCode="NG" value="234">Nigeria (+234)</option>
-      <option data-countryCode="NU" value="683">Niue (+683)</option>
-      <option data-countryCode="NF" value="672">Norfolk Islands (+672)</option>
-      <option data-countryCode="NP" value="670">Northern Marianas (+670)</option>
-      <option data-countryCode="NO" value="47">Norway (+47)</option>
-      <option data-countryCode="OM" value="968">Oman (+968)</option>
-      <option data-countryCode="PW" value="680">Palau (+680)</option>
-      <option data-countryCode="PA" value="507">Panama (+507)</option>
-      <option data-countryCode="PG" value="675">Papua New Guinea (+675)</option>
-      <option data-countryCode="PY" value="595">Paraguay (+595)</option>
-      <option data-countryCode="PE" value="51">Peru (+51)</option>
-      <option data-countryCode="PH" value="63">Philippines (+63)</option>
-      <option data-countryCode="PL" value="48">Poland (+48)</option>
-      <option data-countryCode="PT" value="351">Portugal (+351)</option>
-      <option data-countryCode="PR" value="1787">Puerto Rico (+1787)</option>
-      <option data-countryCode="QA" value="974">Qatar (+974)</option>
-      <option data-countryCode="RE" value="262">Reunion (+262)</option>
-      <option data-countryCode="RO" value="40">Romania (+40)</option>
-      <option data-countryCode="RU" value="7">Russia (+7)</option>
-      <option data-countryCode="RW" value="250">Rwanda (+250)</option>
-      <option data-countryCode="SM" value="378">San Marino (+378)</option>
-      <option data-countryCode="ST" value="239">Sao Tome &amp; Principe (+239)</option>
-      <option data-countryCode="SA" value="966">Saudi Arabia (+966)</option>
-      <option data-countryCode="SN" value="221">Senegal (+221)</option>
-      <option data-countryCode="CS" value="381">Serbia (+381)</option>
-      <option data-countryCode="SC" value="248">Seychelles (+248)</option>
-      <option data-countryCode="SL" value="232">Sierra Leone (+232)</option>
-      <option data-countryCode="SG" value="65">Singapore (+65)</option>
-      <option data-countryCode="SK" value="421">Slovak Republic (+421)</option>
-      <option data-countryCode="SI" value="386">Slovenia (+386)</option>
-      <option data-countryCode="SB" value="677">Solomon Islands (+677)</option>
-      <option data-countryCode="SO" value="252">Somalia (+252)</option>
-      <option data-countryCode="ZA" value="27">South Africa (+27)</option>
-      <option data-countryCode="ES" value="34">Spain (+34)</option>
-      <option data-countryCode="LK" value="94">Sri Lanka (+94)</option>
-      <option data-countryCode="SH" value="290">St. Helena (+290)</option>
-      <option data-countryCode="KN" value="1869">St. Kitts (+1869)</option>
-      <option data-countryCode="SC" value="1758">St. Lucia (+1758)</option>
-      <option data-countryCode="SD" value="249">Sudan (+249)</option>
-      <option data-countryCode="SR" value="597">Suriname (+597)</option>
-      <option data-countryCode="SZ" value="268">Swaziland (+268)</option>
-      <option data-countryCode="SE" value="46">Sweden (+46)</option>
-      <option data-countryCode="CH" value="41">Switzerland (+41)</option>
-      <option data-countryCode="SI" value="963">Syria (+963)</option>
-      <option data-countryCode="TW" value="886">Taiwan (+886)</option>
-      <option data-countryCode="TJ" value="7">Tajikstan (+7)</option>
-      <option data-countryCode="TH" value="66">Thailand (+66)</option>
-      <option data-countryCode="TG" value="228">Togo (+228)</option>
-      <option data-countryCode="TO" value="676">Tonga (+676)</option>
-      <option data-countryCode="TT" value="1868">Trinidad &amp; Tobago (+1868)</option>
-      <option data-countryCode="TN" value="216">Tunisia (+216)</option>
-      <option data-countryCode="TR" value="90">Turkey (+90)</option>
-      <option data-countryCode="TM" value="7">Turkmenistan (+7)</option>
-      <option data-countryCode="TM" value="993">Turkmenistan (+993)</option>
-      <option data-countryCode="TC" value="1649">Turks &amp; Caicos Islands (+1649)</option>
-      <option data-countryCode="TV" value="688">Tuvalu (+688)</option>
-      <option data-countryCode="UG" value="256">Uganda (+256)</option>
-      <option data-countryCode="GB" value="44">UK (+44)</option>
-      <option data-countryCode="UA" value="380">Ukraine (+380)</option>
-      <option data-countryCode="AE" value="971">United Arab Emirates (+971)</option>
-      <option data-countryCode="UY" value="598">Uruguay (+598)</option>
-      <option data-countryCode="UZ" value="7">Uzbekistan (+7)</option>
-      <option data-countryCode="VU" value="678">Vanuatu (+678)</option>
-      <option data-countryCode="VA" value="379">Vatican City (+379)</option>
-      <option data-countryCode="VE" value="58">Venezuela (+58)</option>
-      <option data-countryCode="VN" value="84">Vietnam (+84)</option>
-      <option data-countryCode="VG" value="84">Virgin Islands - British (+1284)</option>
-      <option data-countryCode="VI" value="84">Virgin Islands - US (+1340)</option>
-      <option data-countryCode="WF" value="681">Wallis &amp; Futuna (+681)</option>
-      <option data-countryCode="YE" value="969">Yemen (North)(+969)</option>
-      <option data-countryCode="YE" value="967">Yemen (South)(+967)</option>
-      <option data-countryCode="ZM" value="260">Zambia (+260)</option>
-      <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
-    </optgroup>
-  </select>
-  <input nbInput fieldSize="small" autofocus type="tel" id="phone" name="phone"
-  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-  [(ngModel)]="phoneNumber.line"
-  required> -->
 
-  <span class="label-with-link">
+  <div class="col-xxl-7">
+    <div class="row">
+      <div class="col-md-6" style="margin-top: 1rem;">
+        <label class="label" for="country-code-select">Select the country code</label>
+        <nb-select  id="country-code-select" style="width: 12.6rem;" autofocus required size="large" name="countryCode" id="" [(ngModel)]="phoneNumber.country">
+          <nb-option data-countryCode="US" Selected value="1">USA & Canada (+1)</nb-option>
+          <nb-option-group label="Other countries">
+            <nb-option data-countryCode="DZ" value="213">Algeria (+213)</nb-option>
+            <nb-option data-countryCode="AD" value="376">Andorra (+376)</nb-option>
+            <nb-option data-countryCode="AO" value="244">Angola (+244)</nb-option>
+            <nb-option data-countryCode="AI" value="1264">Anguilla (+1264)</nb-option>
+            <nb-option data-countryCode="AG" value="1268">Antigua &amp; Barbuda (+1268)</nb-option>
+            <nb-option data-countryCode="AR" value="54">Argentina (+54)</nb-option>
+            <nb-option data-countryCode="AM" value="374">Armenia (+374)</nb-option>
+            <nb-option data-countryCode="AW" value="297">Aruba (+297)</nb-option>
+            <nb-option data-countryCode="AU" value="61">Australia (+61)</nb-option>
+            <nb-option data-countryCode="AT" value="43">Austria (+43)</nb-option>
+            <nb-option data-countryCode="AZ" value="994">Azerbaijan (+994)</nb-option>
+            <nb-option data-countryCode="BS" value="1242">Bahamas (+1242)</nb-option>
+            <nb-option data-countryCode="BH" value="973">Bahrain (+973)</nb-option>
+            <nb-option data-countryCode="BD" value="880">Bangladesh (+880)</nb-option>
+            <nb-option data-countryCode="BB" value="1246">Barbados (+1246)</nb-option>
+            <nb-option data-countryCode="BY" value="375">Belarus (+375)</nb-option>
+            <nb-option data-countryCode="BE" value="32">Belgium (+32)</nb-option>
+            <nb-option data-countryCode="BZ" value="501">Belize (+501)</nb-option>
+            <nb-option data-countryCode="BJ" value="229">Benin (+229)</nb-option>
+            <nb-option data-countryCode="BM" value="1441">Bermuda (+1441)</nb-option>
+            <nb-option data-countryCode="BT" value="975">Bhutan (+975)</nb-option>
+            <nb-option data-countryCode="BO" value="591">Bolivia (+591)</nb-option>
+            <nb-option data-countryCode="BA" value="387">Bosnia Herzegovina (+387)</nb-option>
+            <nb-option data-countryCode="BW" value="267">Botswana (+267)</nb-option>
+            <nb-option data-countryCode="BR" value="55">Brazil (+55)</nb-option>
+            <nb-option data-countryCode="BN" value="673">Brunei (+673)</nb-option>
+            <nb-option data-countryCode="BG" value="359">Bulgaria (+359)</nb-option>
+            <nb-option data-countryCode="BF" value="226">Burkina Faso (+226)</nb-option>
+            <nb-option data-countryCode="BI" value="257">Burundi (+257)</nb-option>
+            <nb-option data-countryCode="KH" value="855">Cambodia (+855)</nb-option>
+            <nb-option data-countryCode="CM" value="237">Cameroon (+237)</nb-option>
+            <nb-option data-countryCode="CA" value="1">Canada (+1)</nb-option>
+            <nb-option data-countryCode="CV" value="238">Cape Verde Islands (+238)</nb-option>
+            <nb-option data-countryCode="KY" value="1345">Cayman Islands (+1345)</nb-option>
+            <nb-option data-countryCode="CF" value="236">Central African Republic (+236)</nb-option>
+            <nb-option data-countryCode="CL" value="56">Chile (+56)</nb-option>
+            <nb-option data-countryCode="CN" value="86">China (+86)</nb-option>
+            <nb-option data-countryCode="CO" value="57">Colombia (+57)</nb-option>
+            <nb-option data-countryCode="KM" value="269">Comoros (+269)</nb-option>
+            <nb-option data-countryCode="CG" value="242">Congo (+242)</nb-option>
+            <nb-option data-countryCode="CK" value="682">Cook Islands (+682)</nb-option>
+            <nb-option data-countryCode="CR" value="506">Costa Rica (+506)</nb-option>
+            <nb-option data-countryCode="HR" value="385">Croatia (+385)</nb-option>
+            <nb-option data-countryCode="CU" value="53">Cuba (+53)</nb-option>
+            <nb-option data-countryCode="CY" value="90392">Cyprus North (+90392)</nb-option>
+            <nb-option data-countryCode="CY" value="357">Cyprus South (+357)</nb-option>
+            <nb-option data-countryCode="CZ" value="42">Czech Republic (+42)</nb-option>
+            <nb-option data-countryCode="DK" value="45">Denmark (+45)</nb-option>
+            <nb-option data-countryCode="DJ" value="253">Djibouti (+253)</nb-option>
+            <nb-option data-countryCode="DM" value="1809">Dominica (+1809)</nb-option>
+            <nb-option data-countryCode="DO" value="1809">Dominican Republic (+1809)</nb-option>
+            <nb-option data-countryCode="EC" value="593">Ecuador (+593)</nb-option>
+            <nb-option data-countryCode="EG" value="20">Egypt (+20)</nb-option>
+            <nb-option data-countryCode="SV" value="503">El Salvador (+503)</nb-option>
+            <nb-option data-countryCode="GQ" value="240">Equatorial Guinea (+240)</nb-option>
+            <nb-option data-countryCode="ER" value="291">Eritrea (+291)</nb-option>
+            <nb-option data-countryCode="EE" value="372">Estonia (+372)</nb-option>
+            <nb-option data-countryCode="ET" value="251">Ethiopia (+251)</nb-option>
+            <nb-option data-countryCode="FK" value="500">Falkland Islands (+500)</nb-option>
+            <nb-option data-countryCode="FO" value="298">Faroe Islands (+298)</nb-option>
+            <nb-option data-countryCode="FJ" value="679">Fiji (+679)</nb-option>
+            <nb-option data-countryCode="FI" value="358">Finland (+358)</nb-option>
+            <nb-option data-countryCode="FR" value="33">France (+33)</nb-option>
+            <nb-option data-countryCode="GF" value="594">French Guiana (+594)</nb-option>
+            <nb-option data-countryCode="PF" value="689">French Polynesia (+689)</nb-option>
+            <nb-option data-countryCode="GA" value="241">Gabon (+241)</nb-option>
+            <nb-option data-countryCode="GM" value="220">Gambia (+220)</nb-option>
+            <nb-option data-countryCode="GE" value="7880">Georgia (+7880)</nb-option>
+            <nb-option data-countryCode="DE" value="49">Germany (+49)</nb-option>
+            <nb-option data-countryCode="GH" value="233">Ghana (+233)</nb-option>
+            <nb-option data-countryCode="GI" value="350">Gibraltar (+350)</nb-option>
+            <nb-option data-countryCode="GR" value="30">Greece (+30)</nb-option>
+            <nb-option data-countryCode="GL" value="299">Greenland (+299)</nb-option>
+            <nb-option data-countryCode="GD" value="1473">Grenada (+1473)</nb-option>
+            <nb-option data-countryCode="GP" value="590">Guadeloupe (+590)</nb-option>
+            <nb-option data-countryCode="GU" value="671">Guam (+671)</nb-option>
+            <nb-option data-countryCode="GT" value="502">Guatemala (+502)</nb-option>
+            <nb-option data-countryCode="GN" value="224">Guinea (+224)</nb-option>
+            <nb-option data-countryCode="GW" value="245">Guinea - Bissau (+245)</nb-option>
+            <nb-option data-countryCode="GY" value="592">Guyana (+592)</nb-option>
+            <nb-option data-countryCode="HT" value="509">Haiti (+509)</nb-option>
+            <nb-option data-countryCode="HN" value="504">Honduras (+504)</nb-option>
+            <nb-option data-countryCode="HK" value="852">Hong Kong (+852)</nb-option>
+            <nb-option data-countryCode="HU" value="36">Hungary (+36)</nb-option>
+            <nb-option data-countryCode="IS" value="354">Iceland (+354)</nb-option>
+            <nb-option data-countryCode="IN" value="91">India (+91)</nb-option>
+            <nb-option data-countryCode="ID" value="62">Indonesia (+62)</nb-option>
+            <nb-option data-countryCode="IR" value="98">Iran (+98)</nb-option>
+            <nb-option data-countryCode="IQ" value="964">Iraq (+964)</nb-option>
+            <nb-option data-countryCode="IE" value="353">Ireland (+353)</nb-option>
+            <nb-option data-countryCode="IL" value="972">Israel (+972)</nb-option>
+            <nb-option data-countryCode="IT" value="39">Italy (+39)</nb-option>
+            <nb-option data-countryCode="JM" value="1876">Jamaica (+1876)</nb-option>
+            <nb-option data-countryCode="JP" value="81">Japan (+81)</nb-option>
+            <nb-option data-countryCode="JO" value="962">Jordan (+962)</nb-option>
+            <nb-option data-countryCode="KZ" value="7">Kazakhstan (+7)</nb-option>
+            <nb-option data-countryCode="KE" value="254">Kenya (+254)</nb-option>
+            <nb-option data-countryCode="KI" value="686">Kiribati (+686)</nb-option>
+            <nb-option data-countryCode="KP" value="850">Korea North (+850)</nb-option>
+            <nb-option data-countryCode="KR" value="82">Korea South (+82)</nb-option>
+            <nb-option data-countryCode="KW" value="965">Kuwait (+965)</nb-option>
+            <nb-option data-countryCode="KG" value="996">Kyrgyzstan (+996)</nb-option>
+            <nb-option data-countryCode="LA" value="856">Laos (+856)</nb-option>
+            <nb-option data-countryCode="LV" value="371">Latvia (+371)</nb-option>
+            <nb-option data-countryCode="LB" value="961">Lebanon (+961)</nb-option>
+            <nb-option data-countryCode="LS" value="266">Lesotho (+266)</nb-option>
+            <nb-option data-countryCode="LR" value="231">Liberia (+231)</nb-option>
+            <nb-option data-countryCode="LY" value="218">Libya (+218)</nb-option>
+            <nb-option data-countryCode="LI" value="417">Liechtenstein (+417)</nb-option>
+            <nb-option data-countryCode="LT" value="370">Lithuania (+370)</nb-option>
+            <nb-option data-countryCode="LU" value="352">Luxembourg (+352)</nb-option>
+            <nb-option data-countryCode="MO" value="853">Macao (+853)</nb-option>
+            <nb-option data-countryCode="MK" value="389">Macedonia (+389)</nb-option>
+            <nb-option data-countryCode="MG" value="261">Madagascar (+261)</nb-option>
+            <nb-option data-countryCode="MW" value="265">Malawi (+265)</nb-option>
+            <nb-option data-countryCode="MY" value="60">Malaysia (+60)</nb-option>
+            <nb-option data-countryCode="MV" value="960">Maldives (+960)</nb-option>
+            <nb-option data-countryCode="ML" value="223">Mali (+223)</nb-option>
+            <nb-option data-countryCode="MT" value="356">Malta (+356)</nb-option>
+            <nb-option data-countryCode="MH" value="692">Marshall Islands (+692)</nb-option>
+            <nb-option data-countryCode="MQ" value="596">Martinique (+596)</nb-option>
+            <nb-option data-countryCode="MR" value="222">Mauritania (+222)</nb-option>
+            <nb-option data-countryCode="YT" value="269">Mayotte (+269)</nb-option>
+            <nb-option data-countryCode="MX" value="52">Mexico (+52)</nb-option>
+            <nb-option data-countryCode="FM" value="691">Micronesia (+691)</nb-option>
+            <nb-option data-countryCode="MD" value="373">Moldova (+373)</nb-option>
+            <nb-option data-countryCode="MC" value="377">Monaco (+377)</nb-option>
+            <nb-option data-countryCode="MN" value="976">Mongolia (+976)</nb-option>
+            <nb-option data-countryCode="MS" value="1664">Montserrat (+1664)</nb-option>
+            <nb-option data-countryCode="MA" value="212">Morocco (+212)</nb-option>
+            <nb-option data-countryCode="MZ" value="258">Mozambique (+258)</nb-option>
+            <nb-option data-countryCode="MN" value="95">Myanmar (+95)</nb-option>
+            <nb-option data-countryCode="NA" value="264">Namibia (+264)</nb-option>
+            <nb-option data-countryCode="NR" value="674">Nauru (+674)</nb-option>
+            <nb-option data-countryCode="NP" value="977">Nepal (+977)</nb-option>
+            <nb-option data-countryCode="NL" value="31">Netherlands (+31)</nb-option>
+            <nb-option data-countryCode="NC" value="687">New Caledonia (+687)</nb-option>
+            <nb-option data-countryCode="NZ" value="64">New Zealand (+64)</nb-option>
+            <nb-option data-countryCode="NI" value="505">Nicaragua (+505)</nb-option>
+            <nb-option data-countryCode="NE" value="227">Niger (+227)</nb-option>
+            <nb-option data-countryCode="NG" value="234">Nigeria (+234)</nb-option>
+            <nb-option data-countryCode="NU" value="683">Niue (+683)</nb-option>
+            <nb-option data-countryCode="NF" value="672">Norfolk Islands (+672)</nb-option>
+            <nb-option data-countryCode="NP" value="670">Northern Marianas (+670)</nb-option>
+            <nb-option data-countryCode="NO" value="47">Norway (+47)</nb-option>
+            <nb-option data-countryCode="OM" value="968">Oman (+968)</nb-option>
+            <nb-option data-countryCode="PW" value="680">Palau (+680)</nb-option>
+            <nb-option data-countryCode="PA" value="507">Panama (+507)</nb-option>
+            <nb-option data-countryCode="PG" value="675">Papua New Guinea (+675)</nb-option>
+            <nb-option data-countryCode="PY" value="595">Paraguay (+595)</nb-option>
+            <nb-option data-countryCode="PE" value="51">Peru (+51)</nb-option>
+            <nb-option data-countryCode="PH" value="63">Philippines (+63)</nb-option>
+            <nb-option data-countryCode="PL" value="48">Poland (+48)</nb-option>
+            <nb-option data-countryCode="PT" value="351">Portugal (+351)</nb-option>
+            <nb-option data-countryCode="PR" value="1787">Puerto Rico (+1787)</nb-option>
+            <nb-option data-countryCode="QA" value="974">Qatar (+974)</nb-option>
+            <nb-option data-countryCode="RE" value="262">Reunion (+262)</nb-option>
+            <nb-option data-countryCode="RO" value="40">Romania (+40)</nb-option>
+            <nb-option data-countryCode="RU" value="7">Russia (+7)</nb-option>
+            <nb-option data-countryCode="RW" value="250">Rwanda (+250)</nb-option>
+            <nb-option data-countryCode="SM" value="378">San Marino (+378)</nb-option>
+            <nb-option data-countryCode="ST" value="239">Sao Tome &amp; Principe (+239)</nb-option>
+            <nb-option data-countryCode="SA" value="966">Saudi Arabia (+966)</nb-option>
+            <nb-option data-countryCode="SN" value="221">Senegal (+221)</nb-option>
+            <nb-option data-countryCode="CS" value="381">Serbia (+381)</nb-option>
+            <nb-option data-countryCode="SC" value="248">Seychelles (+248)</nb-option>
+            <nb-option data-countryCode="SL" value="232">Sierra Leone (+232)</nb-option>
+            <nb-option data-countryCode="SG" value="65">Singapore (+65)</nb-option>
+            <nb-option data-countryCode="SK" value="421">Slovak Republic (+421)</nb-option>
+            <nb-option data-countryCode="SI" value="386">Slovenia (+386)</nb-option>
+            <nb-option data-countryCode="SB" value="677">Solomon Islands (+677)</nb-option>
+            <nb-option data-countryCode="SO" value="252">Somalia (+252)</nb-option>
+            <nb-option data-countryCode="ZA" value="27">South Africa (+27)</nb-option>
+            <nb-option data-countryCode="ES" value="34">Spain (+34)</nb-option>
+            <nb-option data-countryCode="LK" value="94">Sri Lanka (+94)</nb-option>
+            <nb-option data-countryCode="SH" value="290">St. Helena (+290)</nb-option>
+            <nb-option data-countryCode="KN" value="1869">St. Kitts (+1869)</nb-option>
+            <nb-option data-countryCode="SC" value="1758">St. Lucia (+1758)</nb-option>
+            <nb-option data-countryCode="SD" value="249">Sudan (+249)</nb-option>
+            <nb-option data-countryCode="SR" value="597">Suriname (+597)</nb-option>
+            <nb-option data-countryCode="SZ" value="268">Swaziland (+268)</nb-option>
+            <nb-option data-countryCode="SE" value="46">Sweden (+46)</nb-option>
+            <nb-option data-countryCode="CH" value="41">Switzerland (+41)</nb-option>
+            <nb-option data-countryCode="SI" value="963">Syria (+963)</nb-option>
+            <nb-option data-countryCode="TW" value="886">Taiwan (+886)</nb-option>
+            <nb-option data-countryCode="TJ" value="7">Tajikstan (+7)</nb-option>
+            <nb-option data-countryCode="TH" value="66">Thailand (+66)</nb-option>
+            <nb-option data-countryCode="TG" value="228">Togo (+228)</nb-option>
+            <nb-option data-countryCode="TO" value="676">Tonga (+676)</nb-option>
+            <nb-option data-countryCode="TT" value="1868">Trinidad &amp; Tobago (+1868)</nb-option>
+            <nb-option data-countryCode="TN" value="216">Tunisia (+216)</nb-option>
+            <nb-option data-countryCode="TR" value="90">Turkey (+90)</nb-option>
+            <nb-option data-countryCode="TM" value="7">Turkmenistan (+7)</nb-option>
+            <nb-option data-countryCode="TM" value="993">Turkmenistan (+993)</nb-option>
+            <nb-option data-countryCode="TC" value="1649">Turks &amp; Caicos Islands (+1649)</nb-option>
+            <nb-option data-countryCode="TV" value="688">Tuvalu (+688)</nb-option>
+            <nb-option data-countryCode="UG" value="256">Uganda (+256)</nb-option>
+            <nb-option data-countryCode="GB" value="44">UK (+44)</nb-option>
+            <nb-option data-countryCode="UA" value="380">Ukraine (+380)</nb-option>
+            <nb-option data-countryCode="AE" value="971">United Arab Emirates (+971)</nb-option>
+            <nb-option data-countryCode="UY" value="598">Uruguay (+598)</nb-option>
+            <nb-option data-countryCode="UZ" value="7">Uzbekistan (+7)</nb-option>
+            <nb-option data-countryCode="VU" value="678">Vanuatu (+678)</nb-option>
+            <nb-option data-countryCode="VA" value="379">Vatican City (+379)</nb-option>
+            <nb-option data-countryCode="VE" value="58">Venezuela (+58)</nb-option>
+            <nb-option data-countryCode="VN" value="84">Vietnam (+84)</nb-option>
+            <nb-option data-countryCode="VG" value="84">Virgin Islands - British (+1284)</nb-option>
+            <nb-option data-countryCode="VI" value="84">Virgin Islands - US (+1340)</nb-option>
+            <nb-option data-countryCode="WF" value="681">Wallis &amp; Futuna (+681)</nb-option>
+            <nb-option data-countryCode="YE" value="969">Yemen (North)(+969)</nb-option>
+            <nb-option data-countryCode="YE" value="967">Yemen (South)(+967)</nb-option>
+            <nb-option data-countryCode="ZM" value="260">Zambia (+260)</nb-option>
+            <nb-option data-countryCode="ZW" value="263">Zimbabwe (+263)</nb-option>
+          </nb-option-group>
+        </nb-select>
+      </div>
+      <div class="col-md-6" style="margin-top: 1rem;">
 
-  <!-- <label class="label">+</label> -->
-  <span> +<input nbInput type="text" fieldSize="small" autofocus required
-   [(ngModel)]="phoneNumber.country" placeholder="1" maxlength="3"
-   style="width: 4rem;"
-   /></span>
+        <label class="label" for="phone-area-code">Enter the phone number:</label>
+   <span>
+      <input id="phone-area-code" nbInput  type="text" fieldSize="large" autofocus required
+      [(ngModel)]="phoneNumber.area" placeholder="222" maxlength="3"
+      style="width: 4rem;margin-right: .3rem;"
+      />
+      
+      <input nbInput type="text" fieldSize="large" autofocus required
+      [(ngModel)]="phoneNumber.prefix" placeholder="555" maxlength="3"
+      style="width: 4rem;margin-right: .3rem;"
+      />
 
-   <input nbInput  type="text" fieldSize="small" autofocus required
-   [(ngModel)]="phoneNumber.area" placeholder="222" maxlength="3"
-   style="width: 4rem;"
-   />
-  
-   <input nbInput type="text" fieldSize="small" autofocus required
-   [(ngModel)]="phoneNumber.prefix" placeholder="555" maxlength="3"
-   style="width: 4rem;"
-   />
-
-   <input nbInput  type="text" fieldSize="small" autofocus required
-   [(ngModel)]="phoneNumber.line" placeholder="5555" maxlength="4"
-   style="width: 4.6rem;"
-   />
+      <input nbInput  type="text" fieldSize="large" autofocus required
+      [(ngModel)]="phoneNumber.line" placeholder="5555" maxlength="4"
+      style="width: 4.6rem;"
+      />
   </span>
+
+      </div>
+    </div>
+   </div>
+
 
   <section class="another-action" aria-label="Send verification code">
   <button nbButton fullWidth size="large" status="info" [hidden]="hideSendSms" (click)="sendLoginCode()">SMS Text Login Code</button>
@@ -304,73 +308,20 @@
     <span class="label-with-link">
       <label class="label" for="input-email">Email address:</label>
       <label class="label">No account? <a class="forgot-password caption-2" routerLink="/fauth/register-user">Register</a></label>
-      <!-- <section aria-label="Register">
-        No account? <a class="text-link caption-2" routerLink="/fauth/register-user">Register</a>
-      </section> -->
-    </span>
-    <input nbInput fullWidth type="text" placeholder="Email address"
+     </span>
+    <input  id="input-email" nbInput fullWidth type="text" placeholder="Email address"
     fieldSize="large"
     autofocus #userName required/>
-    <!-- <input nbInput
-           fullWidth
-           [(ngModel)]="user.email"
-           #email="ngModel"
-           name="email"
-           id="input-email"
-           pattern=".+@.+\..+"
-           placeholder="Email address"
-           fieldSize="large"
-           autofocus
-           [status]="email.dirty ? (email.invalid  ? 'danger' : 'success') : 'basic'"
-           [required]="getConfigValue('forms.validation.email.required')"
-           [attr.aria-invalid]="email.invalid && email.touched ? true : null"> -->
-    <!-- <ng-container *ngIf="email.invalid && email.touched">
-      <p class="caption status-danger" *ngIf="email.errors?.required">
-        Email is required!
-      </p>
-      <p class="caption status-danger" *ngIf="email.errors?.pattern">
-        Email should be the real one!
-      </p>
-    </ng-container> -->
-  </div>
+   </div>
 
   <div class="form-control-group">
     <span class="label-with-link">
       <label class="label" for="input-password">Password:</label>
       <a class="forgot-password caption-2" routerLink="/fauth/forgot-password">Forgot Password?</a>
     </span>
-    <input nbInput
-    fullWidth type="password" fieldSize="large" placeholder="Password" #userPassword required>
-    <!-- <input nbInput
-           fullWidth
-           [(ngModel)]="user.password"
-           #password="ngModel"
-           name="password"
-           type="password"
-           id="input-password"
-           placeholder="Password"
-           fieldSize="large"
-           [status]="password.dirty ? (password.invalid  ? 'danger' : 'success') : 'basic'"
-           [required]="getConfigValue('forms.validation.password.required')"
-           [minlength]="getConfigValue('forms.validation.password.minLength')"
-           [maxlength]="getConfigValue('forms.validation.password.maxLength')"
-           [attr.aria-invalid]="password.invalid && password.touched ? true : null"> -->
-    <!-- <ng-container *ngIf="password.invalid && password.touched ">
-      <p class="caption status-danger" *ngIf="password.errors?.required">
-        Password is required!
-      </p>
-      <p class="caption status-danger" *ngIf="password.errors?.minlength || password.errors?.maxlength">
-        Password should contain
-        from {{ getConfigValue('forms.validation.password.minLength') }}
-        to {{ getConfigValue('forms.validation.password.maxLength') }}
-        characters
-      </p>
-    </ng-container> -->
+    <input nbInput  id="input-password"
+    fullWidth type="password" fieldSize="large" placeholder="Password" #userPassword required>  
   </div>
-
-  <!-- <div class="form-control-group accept-group">
-    <nb-checkbox name="rememberMe" [(ngModel)]="user.rememberMe" *ngIf="rememberMe">Remember me</nb-checkbox>
-  </div> -->
 
   <button nbButton
   fullWidth
@@ -379,14 +330,6 @@
   [disabled]="submitted || !form.valid" (click)="authService.SignIn(userName.value, userPassword.value)">
   Log in with email
   </button>
-  <!-- <button nbButton
-          fullWidth
-          status="primary"
-          size="large"
-          [disabled]="submitted || !form.valid"
-          [class.btn-pulse]="submitted">
-    Log In
-  </button> -->
 </form>
 </section>
 
@@ -399,97 +342,3 @@
     Log in with Google
   </button>
 </section>
-
-<!-- 
-<section class="another-action" aria-label="Register">
-  Don't have an account? <a class="text-link" routerLink="/fauth/register-user">Register</a>
-</section> -->
-
-<div class="displayTable" >
-  <div class="displayTableCell">
-
-   <!-- <div class="authBlock">
-      <h3>Sign In</h3>
-
-      <div [hidden]="user" class="formGroup center">
-
-        <div [hidden]="hideCaptcha" class="label">Resolve reCaptcha for phone login!
-          <div style="transform: scale(0.8);" id="recaptcha-container"></div>
-        </div>
-        <div class="label">No previous sign-up needed for the phone login!</div>
-        <div >
-            <div
-            style="float: left;
-            width: auto;
-            height: 24px;
-            padding: 2px 2px;
-            border: 0px solid #e7e7e7;
-            outline: none;
-            font-size: 15px;
-            font-weight: 700;
-            color: #aaaaaa;
-            background-color: transparent;
-            background: transparent;">+</div>
-            <input class="formControl left-div" style="width: 2.5rem;"
-             type="text" [(ngModel)]="phoneNumber.country" placeholder="1" maxlength="2">
-            <input class="formControl left-div" style="width: 3.3rem;" 
-              type="text" [(ngModel)]="phoneNumber.area" placeholder="613" maxlength="3">
-            <input class="formControl left-div" 
-              style="width: 3.3rem;" type="text" [(ngModel)]="phoneNumber.prefix" placeholder="555"  maxlength="3">
-            <input class="formControl left-div" 
-            style="width: 4rem;;"
-             type="text"
-             [(ngModel)]="phoneNumber.line"
-            placeholder="5555" maxlength="4">
-
-            <button class="btn facebookBtn" [hidden]="hideSendSms" (click)="sendLoginCode()"
-             style="margin-top: 10px;">SMS Text Login Code</button>
-
-            <div class="formGroup" *ngIf="windowRef.confirmationResult" style="margin-top: 10px;">
-              <input class="formControl left-div" type="text" name="code" style="width: 100%;" placeholder="Verification Code" [(ngModel)]="verificationCode">
-              <button class="btn btnPrimary" style="margin-top: 10px;" (click)="verifyLoginCode()">Log in with phone</button>
-            </div>
-
-        </div>
-      </div>
-
-      <div class="formGroup">
-        <span class="or"><span class="orInner">Or</span></span>
-      </div>
-
-      <div nbInput>
-        <input type="text" class="formControl" placeholder="Username" #userName required>
-      </div>
-
-      <div nbInput>
-        <input type="password" class="formControl" placeholder="Password" #userPassword required>
-      </div>
-
-      <div class="formGroup">
-        <input nbButton type="button" class="btn btnPrimary" value="Log in with email" (click)="authService.SignIn(userName.value, userPassword.value)">
-      </div>
-
-      <div class="forgotPassword">
-        <span routerLink="/fauth/forgot-password">Forgot your password?</span>
-      </div>
-
-      <div class="redirectToLogin">
-        <span>Don't have an account? </span>
-        <span class="redirect" routerLink="/fauth/register-user">Sign Up with Email</span>
-      </div>
-
-      <div class="formGroup">
-        <span class="or"><span class="orInner">Or</span></span>
-      </div>
-
-      <div class="formGroup">
-        <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
-          <i class="fab fa-google-plus-g"></i>
-          Log in with Google
-        </button>
-      </div>
-
-    </div> -->
-
-  </div>
-</div>

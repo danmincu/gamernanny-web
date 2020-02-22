@@ -17,7 +17,7 @@ export class SignInComponent implements OnInit {
 
   windowRef: any;
 
-  phoneNumber = new PhoneNumber()
+  phoneNumber = new PhoneNumber();
 
   verificationCode: string;
 
@@ -36,6 +36,7 @@ export class SignInComponent implements OnInit {
     ) { }
 
   ngOnInit() {   
+    this.phoneNumber.country = "1";
     this.windowRef = this.win.windowRef;    
     this.windowRef.confirmationResult = null;
     var self = this;
