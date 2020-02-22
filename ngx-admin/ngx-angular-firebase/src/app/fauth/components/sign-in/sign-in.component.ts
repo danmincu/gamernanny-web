@@ -3,7 +3,7 @@ import { FauthService } from "../../shared/services/fauth.service";
 import { WindowService } from '../../window.service';
 import { Router } from '@angular/router';
 import * as firebase from 'firebase';
-import { PhoneNumber } from './phone-number';
+import { PhoneNumber, CountryCodes } from './phone-number';
 
 
 
@@ -22,6 +22,7 @@ export class SignInComponent implements OnInit {
   verificationCode: string;
 
   user: any;
+  CC = CountryCodes;
 
   public hideCaptcha : boolean = false;
   public hideSendSms : boolean = true;
