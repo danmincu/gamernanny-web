@@ -33,7 +33,7 @@ export class SignInComponent implements OnInit {
     public authService: FauthService,
     private router: Router,
     private cdRef: ChangeDetectorRef,  
-    public ngZone: NgZone // NgZone service to remove outside scope warning
+    public ngZone: NgZone // NgZone service to remove outside scope warning    
     ) { }
 
   ngOnInit() {   
@@ -74,13 +74,18 @@ export class SignInComponent implements OnInit {
 
     const appVerifier = this.windowRef.recaptchaVerifier;    
     const num = this.phoneNumber.e164;
+    let thisref = this;
 
     // firebase.auth().signInWithPhoneNumber(num, appVerifier)
     this.authService.PhoneAuth(num, appVerifier)
             .then(result => {
-                this.windowRef.confirmationResult = result;
-                this.hideCaptcha = true;
-                this.hideSendSms = true;
+                setTimeout( () => {
+                  thisref.windowRef.confirmationResult = result;
+                  thisref.hideCaptcha = true;
+                  thisref.hideSendSms = true;
+                  thisref.cdRef.markForCheck();
+                  thisref.cdRef.detectChanges();
+                }, 1000);                
             })
             .catch( error =>
               { 
